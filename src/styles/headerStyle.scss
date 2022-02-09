@@ -1,0 +1,34 @@
+.header{
+  height: 100vh;
+  position: relative;
+  background-image: url("../assets/header_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+
+  .header_sound{
+    width: 5%;
+    height: 5%;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+  }
+  .header_push_canna{
+    width: 65%;
+    height: 250px;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+
+    //background-color: rgba(102, 51, 153, 0.3);
+  }
+}
+
+
+
+
+
+
+
+
+
