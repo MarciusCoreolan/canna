@@ -7,7 +7,7 @@ import boombox from '../../assets/BOOMBOX_00000.png'
 import work_in_progress from '../../assets/work_in_progress.png'
 
 function Header(props) {
-    const [sound, setSound] = useState(false)
+    const [sound, setSound] = useState(true)
     const handleClick = () =>{
         setSound(!sound)
     }
