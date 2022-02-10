@@ -1,0 +1,41 @@
+.footer{
+  display: flex;
+  justify-content: center;
+  padding-top: 25%;
+  background-image: url("../assets/footer_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .canna_container{
+    display: flex;
+    align-items: end;
+    width: 45%;
+    margin: auto;
+  }
+  .continued{
+    width: 27.9%;
+    height: 33%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .insta{
+    position: absolute;
+    width: 25%;
+    left: 65%;
+    bottom: 42%;
+  }
+  .discord{
+    position: absolute;
+    width: 30%;
+    left: 15%;
+    bottom: 35%;
+  }
+  .twitter{
+    position: absolute;
+    width: 25%;
+    left: 9%;
+    bottom: 18%;
+  }
+}
