@@ -1,6 +1,6 @@
 .canna_slider{
-  margin: -5px 0;
-  background-image: url("../assets/scroll_bg.png");
+  margin: -5px 0 -2px;
+  background-image: url("../assets/slider/scroll_bg.png");
   background-size: cover;
   padding: 10px 0;
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@
     .button_prev, .button_next{
       position: absolute;
       width: 5%;
-      top: -17%;
+      top: -23%;
       z-index: 10;
       cursor: pointer;
     }

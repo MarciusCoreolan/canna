@@ -1,9 +1,9 @@
 import React from "react";
-import footer_canna from "../../assets/footer_canna.png";
-import discord from "../../assets/discord bubble.png";
-import twitter from "../../assets/twitter bubble.png";
-import insta from "../../assets/instagram bubble.png";
-import continued from "../../assets/to be continued bubble.png";
+import footer_canna from "../../assets/footer/footer_canna.png";
+import discord from "../../assets/footer/discord bubble.png";
+import twitter from "../../assets/footer/twitter bubble.png";
+import insta from "../../assets/footer/instagram bubble.png";
+import continued from "../../assets/footer/to be continued bubble.png";
 
 function Footer(props) {
   return (
