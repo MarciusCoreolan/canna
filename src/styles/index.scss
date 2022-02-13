@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'MouseMemoirs';
+  src: url('../fonts/MouseMemoirs-Regular.eot');
+  src: local('☺'), url('../fonts/MouseMemoirs-Regular.woff') format('woff'), url('../fonts/MouseMemoirs-Regular.ttf') format('truetype'), url('../fonts/MouseMemoirs-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@import "headerStyle";
+@import "comixStyle";
+@import "sliderStyle";
+@import "footerStyle";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "MouseMemoirs", sans-serif;
+}
+img{
+  width: 100%;
+}
