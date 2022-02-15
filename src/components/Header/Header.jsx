@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import soundOn from '../../assets/header/sound on.png'
-import soundOff from '../../assets/header/sound off.png'
+import soundOn from '../../assets/header/sound_on.webp'
+import soundOff from '../../assets/header/sound_off.webp'
 import canna from '../../assets/header/PUSHUP_SHADOW_00000.gif'
-import header_title from '../../assets/header/header_title.png'
+import header_title from '../../assets/header/header_title.webp'
 import boombox from '../../assets/header/BOOMBOX_00000.gif'
-import work_in_progress from '../../assets/header/work_in_progress.png'
+import work_in_progress from '../../assets/header/work_in_progress.webp'
 
 function Header(props) {
     const [sound, setSound] = useState(true)

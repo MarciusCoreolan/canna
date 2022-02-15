@@ -1,7 +1,7 @@
 .header{
   position: relative;
   padding-top: 2%;
-  background-image: url("../assets/header/header_bg.png");
+  background-image: url("../assets/header/header_bg.webp");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -19,11 +19,14 @@
     right: 2%;
     top: 2%;
     cursor: pointer;
+    &:active{
+      top: 2.2%;
+    }
   }
   .work_in_progress{
     width: 20%;
     position: absolute;
-    top: 15%;
+    top: 20%;
     right: 2%;
     z-index: 4;
   }

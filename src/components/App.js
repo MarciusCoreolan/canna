@@ -5,6 +5,7 @@ import CannaSlider from "./CannaSlider/CannaSlider";
 import Footer from "./Footer/Footer";
 
 function App(props) {
+
     return (
         <div>
           <Header/>

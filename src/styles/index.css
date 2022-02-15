@@ -1,0 +1,170 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "MouseMemoirs";
+  src: url("../fonts/MouseMemoirs-Regular.eot");
+  src: local("☺"), url("../fonts/MouseMemoirs-Regular.woff") format("woff"), url("../fonts/MouseMemoirs-Regular.ttf") format("truetype"), url("../fonts/MouseMemoirs-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.header {
+  position: relative;
+  padding-top: 2%;
+  background-image: url("../assets/header/header_bg.webp");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.header .header_title {
+  width: 80%;
+  margin: auto;
+  position: relative;
+  z-index: 5;
+}
+.header .header_sound {
+  width: 5%;
+  height: 9%;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  cursor: pointer;
+}
+.header .header_sound:active {
+  top: 2.2%;
+}
+.header .work_in_progress {
+  width: 20%;
+  position: absolute;
+  top: 20%;
+  right: 2%;
+  z-index: 4;
+}
+.header .header_main_container {
+  display: flex;
+}
+.header .header_main_container .boombox {
+  width: 30%;
+  display: flex;
+  align-items: end;
+  padding-bottom: 2%;
+}
+.header .header_main_container .header_push_canna {
+  width: 70%;
+  margin-left: auto;
+}
+
+.comix_section {
+  margin: 0;
+}
+
+.canna_slider {
+  margin: -5px 0 -2px;
+  background-image: url("../assets/slider/scroll_bg.webp");
+  background-size: cover;
+  padding: 10px 0;
+  background-repeat: no-repeat;
+}
+.canna_slider .slider {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.canna_slider .slider * {
+  margin: 0;
+}
+.canna_slider .slider .button_prev, .canna_slider .slider .button_next {
+  position: absolute;
+  width: 5%;
+  top: -23%;
+  z-index: 10;
+  cursor: pointer;
+}
+.canna_slider .slider .button_prev:active, .canna_slider .slider .button_next:active {
+  top: -22.7%;
+}
+.canna_slider .slider .button_prev {
+  right: 10%;
+}
+.canna_slider .slider .button_next {
+  right: 2%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 25%;
+  background-image: url("../assets/footer/footer_bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.footer .canna_container {
+  display: flex;
+  align-items: end;
+  width: 45%;
+  margin: auto;
+}
+.footer .continued {
+  width: 27.9%;
+  height: 33%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.footer .insta {
+  position: absolute;
+  width: 25%;
+  left: 63%;
+}
+.footer .insta a {
+  width: 70%;
+  height: 55%;
+  position: absolute;
+  transform: rotate(5deg);
+  top: 10%;
+  left: 10%;
+  z-index: 100;
+}
+.footer .discord {
+  position: absolute;
+  width: 30%;
+  left: 15%;
+}
+.footer .discord a {
+  width: 70%;
+  height: 50%;
+  position: absolute;
+  transform: rotate(-10deg);
+  border-radius: 50%;
+  top: 9%;
+  left: 12%;
+  z-index: 100;
+}
+.footer .twitter {
+  position: absolute;
+  width: 25%;
+  left: 9%;
+}
+.footer .twitter a {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  transform: rotate(-10deg);
+  border-radius: 50%;
+  top: 5%;
+  left: 12%;
+  z-index: 100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "MouseMemoirs", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=index.css.map */

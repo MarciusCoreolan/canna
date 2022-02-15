@@ -1,10 +1,10 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
-import slide1 from "../../assets/slider/slide1.png";
-import slide2 from "../../assets/slider/slide2.png";
-import slide3 from "../../assets/slider/slide3.png";
-import prev from "../../assets/slider/arrow_left.png";
-import next from "../../assets/slider/arrow_right.png";
+import slide1 from "../../assets/slider/slide1.webp";
+import slide2 from "../../assets/slider/slide2.webp";
+import slide3 from "../../assets/slider/slide3.webp";
+import prev from "../../assets/slider/arrow_left.webp";
+import next from "../../assets/slider/arrow_right.webp";
 
 function CannaSlider(props) {
   const buttons =  ({ type, onClick }) => (

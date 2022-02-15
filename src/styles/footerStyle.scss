@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   padding-top: 25%;
-  background-image: url("../assets/footer/footer_bg.png");
+  background-image: url("../assets/footer/footer_bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -23,19 +23,45 @@
   .insta{
     position: absolute;
     width: 25%;
-    left: 65%;
-    bottom: 42%;
+    left: 63%;
+    a{
+      width: 70%;
+      height: 55%;
+      position: absolute;
+      transform: rotate(5deg);
+      top: 10%;
+      left: 10%;
+      z-index: 100;
+    }
   }
   .discord{
     position: absolute;
     width: 30%;
     left: 15%;
-    bottom: 35%;
+    a{
+      width: 70%;
+      height: 50%;
+      position: absolute;
+      transform: rotate(-10deg);
+      border-radius: 50%;
+      top: 9%;
+      left: 12%;
+      z-index: 100;
+    }
   }
   .twitter{
     position: absolute;
     width: 25%;
     left: 9%;
-    bottom: 18%;
+    a{
+      width: 70%;
+      height: 70%;
+      position: absolute;
+      transform: rotate(-10deg);
+      border-radius: 50%;
+      top: 5%;
+      left: 12%;
+      z-index: 100;
+    }
   }
 }
