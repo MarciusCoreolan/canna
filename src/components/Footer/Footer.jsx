@@ -26,11 +26,13 @@ function Footer(props) {
       <div className={"footer_img_container discord"} style={active.discord}>
         <img src={discord} alt="discord" />
         <a
+          target="_blank"
           href={"https://discord.com/invite/KEAnytN9G9"}
+          selector={"disc"}
+          rel="noreferrer"
           onClick={(e) => {
             handleClick(e);
           }}
-          selector={"disc"}
         >
           {" "}
         </a>
@@ -38,11 +40,13 @@ function Footer(props) {
       <div className={"footer_img_container twitter"} style={active.twitter}>
         <img src={twitter} alt="twitter" />
         <a
+          target="_blank"
           href={"https://twitter.com/CannaSapiensNFT"}
+          selector={"twit"}
+          rel="noreferrer"
           onClick={(e) => {
             handleClick(e);
           }}
-          selector={"twit"}
         >
           {" "}
         </a>
@@ -55,11 +59,13 @@ function Footer(props) {
       <div className={"footer_img_container insta"} style={active.insta}>
         <img src={insta} alt="instagram" />
         <a
+          target="_blank"
           href={"https://www.instagram.com/canna_sapiens_nft/"}
+          selector={"insta"}
+          rel="noreferrer"
           onClick={(e) => {
             handleClick(e);
           }}
-          selector={"insta"}
         >
           {" "}
         </a>
