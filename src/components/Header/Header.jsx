@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import soundOn from '../../assets/header/sound_on.webp'
 import soundOff from '../../assets/header/sound_off.webp'
-import canna from '../../assets/header/PUSHUP_SHADOW_00000.gif'
+import canna from '../../assets/header/canna.gif'
 import header_title from '../../assets/header/header_title.webp'
-import boombox from '../../assets/header/BOOMBOX_00000.gif'
+import boombox from '../../assets/header/BOOMBOX_00000-min.gif'
 import work_in_progress from '../../assets/header/work_in_progress.webp'
 
 function Header(props) {
