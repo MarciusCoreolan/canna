@@ -20,16 +20,22 @@ function Footer(props) {
       setToggle(false);
     }, [100]);
   };
+  const handleMove = (e) =>{
+      setToggle(e.target.getAttribute("selector"));
+  }
 
   return (
-    <div className={"footer"}>
+    <div className={"footer"} onMouseUp={()=>setToggle(false)}
+    >
       <div className={"footer_img_container discord"} style={active.discord}>
-        <img src={discord} alt="discord" />
+        <img src={discord} alt="discord"/>
         <a
+          className={'footer_link'}
           target="_blank"
           href={"https://discord.com/invite/KEAnytN9G9"}
           selector={"disc"}
           rel="noreferrer"
+          onMouseDown={(e)=>handleMove(e)}
           onClick={(e) => {
             handleClick(e);
           }}
@@ -44,6 +50,7 @@ function Footer(props) {
           href={"https://twitter.com/CannaSapiensNFT"}
           selector={"twit"}
           rel="noreferrer"
+          onMouseDown={(e)=>handleMove(e)}
           onClick={(e) => {
             handleClick(e);
           }}
@@ -63,6 +70,7 @@ function Footer(props) {
           href={"https://www.instagram.com/canna_sapiens_nft/"}
           selector={"insta"}
           rel="noreferrer"
+          onMouseDown={(e)=>handleMove(e)}
           onClick={(e) => {
             handleClick(e);
           }}
