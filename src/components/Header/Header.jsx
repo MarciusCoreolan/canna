@@ -3,7 +3,7 @@ import soundOn from '../../assets/header/sound_on.webp'
 import soundOff from '../../assets/header/sound_off.webp'
 import canna from '../../assets/header/canna.webm'
 import header_title from '../../assets/header/header_title.webp'
-import boombox from '../../assets/header/BOOMBOX_00000-min.gif'
+import boombox from '../../assets/header/BOOMBOX.webm'
 import work_in_progress from '../../assets/header/work_in_progress.webp'
 
 function Header(props) {
@@ -25,7 +25,9 @@ function Header(props) {
 
             <div className={'header_main_container'}>
                 <div className={'boombox'}>
-                    <img src={boombox} alt=""/>
+                    <video muted width="100%" autoPlay loop >
+                        <source src={boombox} type='video/ogg; codecs="theora, vorbis"'/>
+                    </video>
                 </div>
                 <div className={'header_push_canna'}>
                     <video muted width="100%" autoPlay loop >
