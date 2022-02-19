@@ -34,8 +34,8 @@
 .header .work_in_progress {
   width: 20%;
   position: absolute;
-  top: 20%;
-  right: 2%;
+  top: 14%;
+  right: 2.5%;
   z-index: 4;
 }
 .header .header_main_container {
@@ -184,6 +184,7 @@
 }
 
 img {
+  user-select: none;
   width: 100%;
 }
 
