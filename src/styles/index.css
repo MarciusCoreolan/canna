@@ -52,6 +52,27 @@
   margin-left: auto;
 }
 
+.comix_section {
+  position: relative;
+}
+.comix_section .bubble_top {
+  position: absolute;
+  width: 35%;
+  top: 15%;
+  left: 38%;
+}
+.comix_section .bubble_bottom {
+  position: absolute;
+  width: 30%;
+  top: 45%;
+  left: 34%;
+}
+.comix_section .comix_text {
+  position: absolute;
+  width: 40%;
+  bottom: 13%;
+}
+
 .canna_slider {
   margin: -17% 0 -15%;
   background-image: url("../assets/slider/slider_bg.webp");
