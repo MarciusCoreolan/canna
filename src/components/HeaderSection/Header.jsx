@@ -3,7 +3,7 @@ import soundOn from '../../assets/header/sound_on.webp'
 import soundOff from '../../assets/header/sound_off.webp'
 import canna from '../../assets/header/canna.webm'
 import header_title from '../../assets/header/header_title.webp'
-import boombox from '../../assets/header/BOOMBOX.webm'
+import boombox from '../../assets/header/feaae841-6c2d-4804-a15b-e66858817daa.mp4'
 import work_in_progress from '../../assets/header/work_in_progress.webp'
 
 function Header(props) {

@@ -116,6 +116,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  margin-top: -27%;
 }
 .footer .canna_container {
   display: flex;
@@ -127,7 +128,7 @@
   width: 27.9%;
   height: 33%;
   position: absolute;
-  bottom: 0;
+  bottom: 2px;
   right: 0;
 }
 .footer .insta {
@@ -176,11 +177,78 @@
   z-index: 100;
 }
 
+.teamSection {
+  background-image: url("../assets/team/team_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.teamSection .teamSection_title {
+  display: flex;
+  position: absolute;
+  width: 70%;
+  top: 7%;
+  left: 10%;
+}
+.teamSection .teamSection_title .the {
+  width: 18%;
+}
+.teamSection .teamSection_title .team_title {
+  width: 40%;
+  margin-left: -30px;
+}
+.teamSection .teamSection_main {
+  padding: 18% 0 26%;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+.teamSection .teamSection_main .teamSection_main_bubble {
+  width: 20%;
+  position: absolute;
+}
+.teamSection .teamSection_main .leo {
+  left: 7.5%;
+  top: 35.2%;
+}
+.teamSection .teamSection_main .flip {
+  top: 33.8%;
+  left: 45.5%;
+}
+.teamSection .teamSection_main .vojta {
+  top: 33.8%;
+  left: 73%;
+}
+.teamSection .teamSection_main .ramazan {
+  top: 62.5%;
+  left: 3.5%;
+}
+.teamSection .teamSection_main .anna {
+  top: 45.6%;
+  left: 30%;
+}
+.teamSection .teamSection_main .fedor {
+  top: 46.2%;
+  left: 64.3%;
+}
+
+body {
+  background-color: white;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "MouseMemoirs", sans-serif;
+}
+
+.wrapper {
+  width: 90%;
+  padding: 0;
+  margin: auto;
+  border-right: 5px solid black;
+  border-left: 5px solid black;
 }
 
 img {

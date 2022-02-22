@@ -1,19 +1,22 @@
-import React from 'react';
-import Header from "./Header/Header";
-import ComixSection from "./Comix/ComixSection";
-import CannaSlider from "./CannaSlider/CannaSlider";
-import Footer from "./Footer/Footer";
+import React from "react";
+import Header from "./HeaderSection/Header";
+import ComixSection from "./ComixSection/ComixSection";
+import CannaSlider from "./SliderSection/CannaSlider";
+import Footer from "./FooterSection/Footer";
+import TeamSection from "./TeamSection/TeamSection";
 
 function App(props) {
-
-    return (
-        <div>
-          <Header/>
-          <ComixSection/>
-          <CannaSlider/>
-          <Footer/>
-        </div>
-    );
+  return (
+    <div>
+      <div className={"wrapper"}>
+        <Header />
+        <ComixSection />
+        <CannaSlider />
+        <TeamSection />
+        <Footer />
+      </div>
+    </div>
+  );
 }
 
 export default App;

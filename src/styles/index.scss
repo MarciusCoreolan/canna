@@ -9,12 +9,23 @@
 @import "comixStyle";
 @import "sliderStyle";
 @import "footerStyle";
+@import "teamStyle";
 
+body{
+  background-color: white;
+}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "MouseMemoirs", sans-serif;
+}
+.wrapper{
+  width: 90%;
+  padding: 0;
+  margin: auto;
+  border-right: 5px solid black;
+  border-left: 5px solid black;
 }
 img{
   user-select: none;
