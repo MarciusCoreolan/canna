@@ -6,6 +6,7 @@ import Footer from "./FooterSection/Footer";
 import TeamSection from "./TeamSection/TeamSection";
 
 function App(props) {
+    const a = []
   return (
     <div>
       <div className={"wrapper"}>
