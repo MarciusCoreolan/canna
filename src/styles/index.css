@@ -40,12 +40,12 @@
 }
 .header .header_main_container {
   display: flex;
+  margin-top: 5%;
 }
 .header .header_main_container .boombox {
   width: 28%;
   display: flex;
   align-items: end;
-  padding-bottom: 2%;
 }
 .header .header_main_container .canna {
   width: 60%;
