@@ -6,7 +6,7 @@ import work_in_progress from "../../assets/header/work_in_progress.webp";
 import { BrowserView, MobileView } from "react-device-detect";
 
 import cannaWebM from "../../assets/header/canna.webm";
-import boomboxWebM from "../../assets/header/boombox.webm";
+import boomboxWebM from "../../assets/header/BOOMBOX.webm";
 
 import cannaPng from "../../assets/header/canna.webp";
 import boomboxPng from "../../assets/header/boombox.webp";
