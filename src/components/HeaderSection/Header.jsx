@@ -38,46 +38,50 @@ function Header(props) {
         <img src={work_in_progress} alt="" />
       </div>
 
-      <div className={"header_main_container"}>
-        <div className={"boombox"}>
-            {onLoad ? (
-            <>
-              <BrowserView>
+      {onLoad ? (
+        <>
+          <BrowserView>
+            <div className={"header_main_container"}>
+              <div className={"boombox"}>
                 <video muted width="100%" autoPlay loop>
                   <source
                     src={boomboxWebM}
                     type='video/ogg; codecs="theora, vorbis"'
                   />
                 </video>
-              </BrowserView>
-              <MobileView>
-                <img src={boomboxGif} alt="" />
-              </MobileView>
-            </>
-          ) : (
-            <img src={boomboxPng} alt="" />
-          )}
-        </div>
-        <div className={"header_push_canna"}>
-          {onLoad ? (
-            <>
-              <BrowserView>
+              </div>
+              <div className={"canna"}>
                 <video muted width="100%" autoPlay loop>
                   <source
                     src={cannaWebM}
                     type='video/ogg; codecs="theora, vorbis"'
                   />
                 </video>
-              </BrowserView>
-              <MobileView>
+              </div>
+            </div>
+          </BrowserView>
+
+          <MobileView>
+            <div className={"header_main_container"}>
+              <div className={"boombox"}>
+                <img src={boomboxGif} alt="" />
+              </div>
+              <div className={"canna"}>
                 <img src={cannaGif} alt="" />
-              </MobileView>
-            </>
-          ) : (
+              </div>
+            </div>
+          </MobileView>
+        </>
+      ) : (
+        <div className={"header_main_container"}>
+          <div className={"boombox"}>
+            <img src={boomboxPng} alt="" />
+          </div>
+          <div className={"canna"}>
             <img src={cannaPng} alt="" />
-          )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
