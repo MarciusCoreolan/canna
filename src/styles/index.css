@@ -4,6 +4,7 @@
   src: url("../fonts/MouseMemoirs-Regular.eot");
   src: local("☺"), url("../fonts/MouseMemoirs-Regular.woff") format("woff"), url("../fonts/MouseMemoirs-Regular.ttf") format("truetype"), url("../fonts/MouseMemoirs-Regular.svg") format("svg");
   font-weight: normal;
+  font-display: swap;
   font-style: normal;
 }
 .header {
@@ -177,23 +178,23 @@
 }
 
 .teamSection {
-  background-image: url("../assets/team/team_bg.png");
+  background-image: url("../assets/team/team_bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
 .teamSection .teamSection_title {
   display: flex;
-  position: absolute;
   width: 70%;
+  position: absolute;
   top: 7%;
   left: 10%;
 }
 .teamSection .teamSection_title .the {
-  width: 18%;
+  width: 20%;
 }
 .teamSection .teamSection_title .team_title {
-  width: 40%;
+  width: 35%;
   margin-left: -30px;
 }
 .teamSection .teamSection_main {
@@ -202,33 +203,295 @@
   margin: auto;
   position: relative;
 }
-.teamSection .teamSection_main .teamSection_main_bubble {
-  width: 20%;
-  position: absolute;
+.teamSection .teamSection_main .teamSection_container {
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.teamSection .teamSection_main .leo {
-  left: 7.5%;
-  top: 35.2%;
-}
-.teamSection .teamSection_main .flip {
-  top: 33.8%;
-  left: 45.5%;
-}
-.teamSection .teamSection_main .vojta {
-  top: 33.8%;
-  left: 73%;
-}
+.teamSection .teamSection_main .leo,
+.teamSection .teamSection_main .anna,
+.teamSection .teamSection_main .fedor,
+.teamSection .teamSection_main .filip,
+.teamSection .teamSection_main .vojta,
 .teamSection .teamSection_main .ramazan {
-  top: 62.5%;
-  left: 3.5%;
+  width: 27%;
+  position: relative;
+  margin-bottom: 4%;
+  transform: scale(1);
+  transition: 0.3s;
+  z-index: 11;
 }
-.teamSection .teamSection_main .anna {
-  top: 45.6%;
+.teamSection .teamSection_main .leo:hover,
+.teamSection .teamSection_main .anna:hover,
+.teamSection .teamSection_main .fedor:hover,
+.teamSection .teamSection_main .filip:hover,
+.teamSection .teamSection_main .vojta:hover,
+.teamSection .teamSection_main .ramazan:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  z-index: 12;
+}
+.teamSection .teamSection_main .leo .leo_bubble,
+.teamSection .teamSection_main .leo .anna_bubble,
+.teamSection .teamSection_main .leo .fedor_bubble,
+.teamSection .teamSection_main .leo .filip_bubble,
+.teamSection .teamSection_main .leo .vojta_bubble,
+.teamSection .teamSection_main .leo .ramazan_bubble,
+.teamSection .teamSection_main .anna .leo_bubble,
+.teamSection .teamSection_main .anna .anna_bubble,
+.teamSection .teamSection_main .anna .fedor_bubble,
+.teamSection .teamSection_main .anna .filip_bubble,
+.teamSection .teamSection_main .anna .vojta_bubble,
+.teamSection .teamSection_main .anna .ramazan_bubble,
+.teamSection .teamSection_main .fedor .leo_bubble,
+.teamSection .teamSection_main .fedor .anna_bubble,
+.teamSection .teamSection_main .fedor .fedor_bubble,
+.teamSection .teamSection_main .fedor .filip_bubble,
+.teamSection .teamSection_main .fedor .vojta_bubble,
+.teamSection .teamSection_main .fedor .ramazan_bubble,
+.teamSection .teamSection_main .filip .leo_bubble,
+.teamSection .teamSection_main .filip .anna_bubble,
+.teamSection .teamSection_main .filip .fedor_bubble,
+.teamSection .teamSection_main .filip .filip_bubble,
+.teamSection .teamSection_main .filip .vojta_bubble,
+.teamSection .teamSection_main .filip .ramazan_bubble,
+.teamSection .teamSection_main .vojta .leo_bubble,
+.teamSection .teamSection_main .vojta .anna_bubble,
+.teamSection .teamSection_main .vojta .fedor_bubble,
+.teamSection .teamSection_main .vojta .filip_bubble,
+.teamSection .teamSection_main .vojta .vojta_bubble,
+.teamSection .teamSection_main .vojta .ramazan_bubble,
+.teamSection .teamSection_main .ramazan .leo_bubble,
+.teamSection .teamSection_main .ramazan .anna_bubble,
+.teamSection .teamSection_main .ramazan .fedor_bubble,
+.teamSection .teamSection_main .ramazan .filip_bubble,
+.teamSection .teamSection_main .ramazan .vojta_bubble,
+.teamSection .teamSection_main .ramazan .ramazan_bubble {
+  width: 70%;
+  position: absolute;
+  z-index: 10;
+  font-size: 1.3vw;
+}
+.teamSection .teamSection_main .leo .leo_bubble,
+.teamSection .teamSection_main .anna .leo_bubble,
+.teamSection .teamSection_main .fedor .leo_bubble,
+.teamSection .teamSection_main .filip .leo_bubble,
+.teamSection .teamSection_main .vojta .leo_bubble,
+.teamSection .teamSection_main .ramazan .leo_bubble {
+  top: 65%;
   left: 30%;
 }
-.teamSection .teamSection_main .fedor {
-  top: 46.2%;
-  left: 64.3%;
+.teamSection .teamSection_main .leo .leo_bubble p,
+.teamSection .teamSection_main .anna .leo_bubble p,
+.teamSection .teamSection_main .fedor .leo_bubble p,
+.teamSection .teamSection_main .filip .leo_bubble p,
+.teamSection .teamSection_main .vojta .leo_bubble p,
+.teamSection .teamSection_main .ramazan .leo_bubble p {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+.teamSection .teamSection_main .leo .filip_bubble,
+.teamSection .teamSection_main .anna .filip_bubble,
+.teamSection .teamSection_main .fedor .filip_bubble,
+.teamSection .teamSection_main .filip .filip_bubble,
+.teamSection .teamSection_main .vojta .filip_bubble,
+.teamSection .teamSection_main .ramazan .filip_bubble {
+  top: 63%;
+  left: 35%;
+}
+.teamSection .teamSection_main .leo .filip_bubble p,
+.teamSection .teamSection_main .anna .filip_bubble p,
+.teamSection .teamSection_main .fedor .filip_bubble p,
+.teamSection .teamSection_main .filip .filip_bubble p,
+.teamSection .teamSection_main .vojta .filip_bubble p,
+.teamSection .teamSection_main .ramazan .filip_bubble p {
+  position: absolute;
+  top: 42%;
+  left: 15%;
+}
+.teamSection .teamSection_main .leo .vojta_bubble,
+.teamSection .teamSection_main .anna .vojta_bubble,
+.teamSection .teamSection_main .fedor .vojta_bubble,
+.teamSection .teamSection_main .filip .vojta_bubble,
+.teamSection .teamSection_main .vojta .vojta_bubble,
+.teamSection .teamSection_main .ramazan .vojta_bubble {
+  top: 60%;
+  left: 0;
+}
+.teamSection .teamSection_main .leo .vojta_bubble p,
+.teamSection .teamSection_main .anna .vojta_bubble p,
+.teamSection .teamSection_main .fedor .vojta_bubble p,
+.teamSection .teamSection_main .filip .vojta_bubble p,
+.teamSection .teamSection_main .vojta .vojta_bubble p,
+.teamSection .teamSection_main .ramazan .vojta_bubble p {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+.teamSection .teamSection_main .leo .ramazan_bubble,
+.teamSection .teamSection_main .anna .ramazan_bubble,
+.teamSection .teamSection_main .fedor .ramazan_bubble,
+.teamSection .teamSection_main .filip .ramazan_bubble,
+.teamSection .teamSection_main .vojta .ramazan_bubble,
+.teamSection .teamSection_main .ramazan .ramazan_bubble {
+  top: 60%;
+  left: 12%;
+}
+.teamSection .teamSection_main .leo .ramazan_bubble p,
+.teamSection .teamSection_main .anna .ramazan_bubble p,
+.teamSection .teamSection_main .fedor .ramazan_bubble p,
+.teamSection .teamSection_main .filip .ramazan_bubble p,
+.teamSection .teamSection_main .vojta .ramazan_bubble p,
+.teamSection .teamSection_main .ramazan .ramazan_bubble p {
+  position: absolute;
+  top: 45%;
+  left: 15%;
+}
+.teamSection .teamSection_main .leo .anna_bubble,
+.teamSection .teamSection_main .anna .anna_bubble,
+.teamSection .teamSection_main .fedor .anna_bubble,
+.teamSection .teamSection_main .filip .anna_bubble,
+.teamSection .teamSection_main .vojta .anna_bubble,
+.teamSection .teamSection_main .ramazan .anna_bubble {
+  top: -2%;
+  left: -22%;
+}
+.teamSection .teamSection_main .leo .anna_bubble p,
+.teamSection .teamSection_main .anna .anna_bubble p,
+.teamSection .teamSection_main .fedor .anna_bubble p,
+.teamSection .teamSection_main .filip .anna_bubble p,
+.teamSection .teamSection_main .vojta .anna_bubble p,
+.teamSection .teamSection_main .ramazan .anna_bubble p {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+}
+.teamSection .teamSection_main .leo .fedor_bubble,
+.teamSection .teamSection_main .anna .fedor_bubble,
+.teamSection .teamSection_main .fedor .fedor_bubble,
+.teamSection .teamSection_main .filip .fedor_bubble,
+.teamSection .teamSection_main .vojta .fedor_bubble,
+.teamSection .teamSection_main .ramazan .fedor_bubble {
+  top: 4%;
+  left: -30%;
+}
+.teamSection .teamSection_main .leo .fedor_bubble p,
+.teamSection .teamSection_main .anna .fedor_bubble p,
+.teamSection .teamSection_main .fedor .fedor_bubble p,
+.teamSection .teamSection_main .filip .fedor_bubble p,
+.teamSection .teamSection_main .vojta .fedor_bubble p,
+.teamSection .teamSection_main .ramazan .fedor_bubble p {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+.teamSection .bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: scale(0.3, 0.3);
+  }
+  20% {
+    transform: scale(1.1, 1.1);
+  }
+  40% {
+    transform: scale(0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.03, 1.03);
+  }
+  80% {
+    transform: scale(0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: scale(0.3, 0.3);
+  }
+  20% {
+    transform: scale(1.1, 1.1);
+  }
+  40% {
+    transform: scale(0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.03, 1.03);
+  }
+  80% {
+    transform: scale(0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+.teamSection .bounceOut {
+  -webkit-animation-name: bounceOut;
+  animation-name: bounceOut;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes bounceOut {
+  20% {
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.3, 0.3);
+    transform: scale(0.3, 0.3);
+  }
+}
+@keyframes bounceOut {
+  20% {
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.3, 0.3);
+    transform: scale(0.3, 0.3);
+  }
 }
 
 body {
@@ -253,6 +516,10 @@ body {
 img {
   user-select: none;
   width: 100%;
+}
+
+.minHeight {
+  min-height: 100vh;
 }
 
 /*# sourceMappingURL=index.css.map */

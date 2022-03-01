@@ -1,49 +1,118 @@
-import React from 'react';
-import  the from '../../assets/team/the_bubble.webp'
-import  team_title from '../../assets/team/team_title.webp'
-import  team from '../../assets/team/team.webp'
-import  leo from '../../assets/team/Leo_bubble.webp'
-import  flip from '../../assets/team/Filip_bubble.webp'
-import  vojta from '../../assets/team/Vojta_bubble.webp'
-import  ramazan from '../../assets/team/Ramazan_bubble.webp'
-import  anna from '../../assets/team/Anna_bubble.webp'
-import  fedor from '../../assets/team/Fedor_bubble.webp'
+import React, { useState } from "react";
+import { BrowserView, MobileView, isBrowser } from "react-device-detect";
+//=================================================================browser
+import the from "../../assets/team/browser/the_bubble.webp";
+import team_title from "../../assets/team/browser/team_title.webp";
+import anna from "../../assets/team/browser/anna.webp";
+import anna_bubble from "../../assets/team/browser/anna_bubble.webp";
+import fedor from "../../assets/team/browser/fedor.webp";
+import fedor_bubble from "../../assets/team/browser/fedor_bubble.webp";
+import filip from "../../assets/team/browser/filip.webp";
+import filip_bubble from "../../assets/team/browser/filip_bubble.webp";
+import leo from "../../assets/team/browser/leo.webp";
+import leo_bubble from "../../assets/team/browser/leo_bubble.webp";
+import ramazan from "../../assets/team/browser/ramazan.webp";
+import ramazan_bubble from "../../assets/team/browser/ramazan_bubble.webp";
+import vojta from "../../assets/team/browser/vojta.webp";
+import vojta_bubble from "../../assets/team/browser/vojta_bubble.webp";
 
-function TeamSection(props) {
-    return (
-        <div className={'teamSection'}>
-            <div className={'teamSection_title'}>
-                <div className={'the'}>
-                    <img src={the} alt=""/>
-                </div>
-                <div className={'team_title'}>
-                    <img src={team_title} alt=""/>
-                </div>
-            </div>
-            <div className={'teamSection_main'}>
-                <img src={team} alt=""/>
+//=================================================================mobile
+// import M_the from "../../assets/team/browser/the_bubble.webp";
+// import M_team_title from "../../assets/team/browser/team_title.webp";
 
-                <div className={'teamSection_main_bubble leo'}>
-                    <img src={leo} alt=""/>
-                </div>
-                <div className={'teamSection_main_bubble flip'}>
-                    <img src={flip} alt=""/>
-                </div>
-                <div className={'teamSection_main_bubble vojta'}>
-                    <img src={vojta} alt=""/>
-                </div>
-                <div className={'teamSection_main_bubble ramazan'}>
-                    <img src={ramazan} alt=""/>
-                </div>
-                <div className={'teamSection_main_bubble anna'}>
-                    <img src={anna} alt=""/>
-                </div>
-                <div className={'teamSection_main_bubble fedor'}>
-                    <img src={fedor} alt=""/>
-                </div>
-            </div>
+function TeamSection({ onLoad }) {
+  const team = [
+    {
+      img: leo,
+      imgClass: "leo",
+      bubbleClass: "leo_bubble",
+      bubble: leo_bubble,
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    },
+    {
+      img: filip,
+      imgClass: "filip",
+      bubbleClass: "filip_bubble",
+      bubble: filip_bubble,
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    },
+    {
+      img: vojta,
+      imgClass: "vojta",
+      bubbleClass: "vojta_bubble",
+      bubble: vojta_bubble,
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    },
+    {
+      img: ramazan,
+      imgClass: "ramazan",
+      bubbleClass: "ramazan_bubble",
+      bubble: ramazan_bubble,
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    },
+    {
+      img: anna,
+      imgClass: "anna",
+      bubbleClass: "anna_bubble",
+      bubble: anna_bubble,
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    },
+    {
+      img: fedor,
+      imgClass: "fedor",
+      bubbleClass: "fedor_bubble",
+      bubble: fedor_bubble,
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    },
+  ];
+  const [imgIndex, setImgIndex] = useState(null);
+
+  const mouseOver = (i) => {
+    setImgIndex(i);
+  };
+  const mouseOut = () => {
+    setImgIndex(null);
+  };
+
+  return (
+    <div className={`teamSection ${!onLoad && isBrowser ? "minHeight" : ""}`}>
+      <BrowserView>
+        <div className={"teamSection_title"}>
+          <div className={"the"}>
+            <img src={the} alt="" />
+          </div>
+          <div className={"team_title"}>
+            <img src={team_title} alt="" />
+          </div>
         </div>
-    );
+        {/*===================================================================================== Main                */}
+        <div className={"teamSection_main"}>
+          <div className={"teamSection_container"}>
+            {team.map((item, index) => {
+              return (
+                <div
+                  className={`${item.imgClass}`}
+                  key={index}
+                  onMouseOut={mouseOut}
+                  onMouseOver={() => {
+                    mouseOver(index);
+                  }}
+                >
+                  <img src={item.img} alt="" />
+                  <div className={`${item.bubbleClass} ${imgIndex === index ? 'bounceIn' : 'bounceOut'}`}>
+                    <img src={item.bubble} alt="" />
+                    <p>{item.text}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>{" "}
+        </div>
+      </BrowserView>
+
+      <MobileView></MobileView>
+    </div>
+  );
 }
 
 export default TeamSection;
