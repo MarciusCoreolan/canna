@@ -67,8 +67,8 @@ function TeamSection({ onLoad }) {
   ];
   const [imgIndex, setImgIndex] = useState(null);
 
-  const mouseOver = (i) => {
-    setImgIndex(i);
+  const mouseOver = (index) => {
+    setImgIndex(index);
   };
   const mouseOut = () => {
     setImgIndex(null);
@@ -99,7 +99,7 @@ function TeamSection({ onLoad }) {
                   }}
                 >
                   <img src={item.img} alt="" />
-                  <div className={`${item.bubbleClass} ${imgIndex === index ? 'bounceIn' : 'bounceOut'}`}>
+                  <div className={`${item.bubbleClass} ${imgIndex === index ? 'bounceIn' : 'zoomOut'}`}>
                     <img src={item.bubble} alt="" />
                     <p>{item.text}</p>
                   </div>

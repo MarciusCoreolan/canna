@@ -9,9 +9,7 @@ import work_in_progress from "../../assets/header/browser/work_in_progress.webp"
 
 // =============================================================================== browser import
 import cannaWebM from "../../assets/header/browser/canna.webm";
-import boomboxWebM from "../../assets/header/browser/BOOMBOX.webm";
 import cannaPng from "../../assets/header/browser/canna.webp";
-import boomboxPng from "../../assets/header/browser/boombox.webp";
 import cannaGif from "../../assets/header/mobile/canna.gif";
 import boomboxGif from "../../assets/header/mobile/boombox.gif";
 // =============================================================================== Mobile import
@@ -45,14 +43,6 @@ function Header({ onLoad }) {
         </div>
         {onLoad ? (
           <div className={"header_main_container"}>
-            <div className={"boombox"}>
-              <video muted width="100%" autoPlay loop>
-                <source
-                  src={boomboxWebM}
-                  type='video/ogg; codecs="theora, vorbis"'
-                />
-              </video>
-            </div>
             <div className={"canna"}>
               <video muted width="100%" autoPlay loop>
                 <source
@@ -64,9 +54,6 @@ function Header({ onLoad }) {
           </div>
         ) : (
           <div className={"header_main_container"}>
-            <div className={"boombox"}>
-              <img src={boomboxPng} alt="" />
-            </div>
             <div className={"canna"}>
               <img src={cannaPng} alt="" />
             </div>
