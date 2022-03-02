@@ -1,10 +1,12 @@
 .header{
   position: relative;
   padding-top: 2%;
+  padding-bottom: 20%;
   background-image: url("../assets/header/header_bg.webp");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
+  margin-bottom: -23%;
 
   .header_title{
     width: 80%;
@@ -26,7 +28,7 @@
   .work_in_progress{
     width: 20%;
     position: absolute;
-    top: 14%;
+    top: 10%;
     right: 2.5%;
     z-index: 4;
   }

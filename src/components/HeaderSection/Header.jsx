@@ -33,9 +33,10 @@ function Header({ onLoad }) {
 
   return (
     <div className={`header ${!onLoad && isBrowser ? "minHeight" : ""}`}>
+      {onLoad &&
       <audio ref={ref} preload="auto" muted={!sound} autoPlay loop>
         <source src={audio} type="audio/mp3" />
-      </audio>
+      </audio>}
       {/*================================================================================= Browser */}
       <BrowserView>
         <HeaderBrowserView
