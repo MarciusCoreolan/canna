@@ -106,11 +106,39 @@ function TeamSection({ onLoad }) {
                 </div>
               );
             })}
-          </div>{" "}
+          </div>
         </div>
       </BrowserView>
-
-      <MobileView></MobileView>
+{/*=================================================================================== Mobile*/}
+      <MobileView>
+        <div className={"teamSection_title"}>
+          <div className={"the"}>
+            <img src={the} alt="" />
+          </div>
+          <div className={"team_title"}>
+            <img src={team_title} alt="" />
+          </div>
+        </div>
+        {/*===================================================================================== Main                */}
+        <div className={"teamSection_main"}>
+          <div className={"teamSection_container"}>
+            {team.map((item, index) => {
+              return (
+                  <div
+                      className={`${item.imgClass}`}
+                      key={index}
+                  >
+                    <img src={item.img} alt="" />
+                    <div className={`${item.bubbleClass}`}>
+                      <img src={item.bubble} alt="" />
+                      <p>{item.text}</p>
+                    </div>
+                  </div>
+              );
+            })}
+          </div>
+        </div>
+      </MobileView>
     </div>
   );
 }
