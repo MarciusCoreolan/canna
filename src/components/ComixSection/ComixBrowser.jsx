@@ -39,7 +39,7 @@ function ComixBrowser({onLoad}) {
         {onLoad && (
           <div
             className={
-              bubbleTopAnimation.isIntersecting ? "fadeLeft" : "opacity"
+              bubbleTopAnimation.isIntersecting ? "fadeInUp" : "opacity"
             }
           >
             <img src={bubble_top} alt="" />
@@ -50,7 +50,7 @@ function ComixBrowser({onLoad}) {
         {onLoad && (
           <div
             className={
-              bubbleBottomAnimation.isIntersecting ? "fadeInRight" : "opacity"
+              bubbleBottomAnimation.isIntersecting ? "fadeInUp" : "opacity"
             }
           >
             <img src={bubble_bottom} alt="" />
@@ -66,7 +66,7 @@ function ComixBrowser({onLoad}) {
         {onLoad && (
           <div
             className={`${
-              cannaPopAnimation.isIntersecting ? "fadeLeft" : "opacity"
+              cannaPopAnimation.isIntersecting ? "fadeInLeftBig" : "opacity"
             }`}
           >
             <img src={canna_pop_up} alt="" />
