@@ -4,7 +4,7 @@ import soundOn from "../../assets/header/sound_on.webp";
 import soundOff from "../../assets/header/sound_off.webp";
 import M_work_in_progress from "../../assets/header/mobile/M_work_in_progress.webp";
 import cannaGif from "../../assets/header/mobile/canna.gif";
-import M_canna from "../../assets/header/mobile/canna.png";
+import M_canna from "../../assets/header/mobile/M_canna.webp";
 
 function HeaderMobileView({handleSoundOnOFF, sound, onLoad}) {
     return (

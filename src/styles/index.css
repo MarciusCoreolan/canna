@@ -23,6 +23,13 @@
   position: relative;
   z-index: 5;
 }
+.header .opacity {
+  opacity: 0;
+  position: absolute;
+}
+.header .npOpacity {
+  opacity: 1;
+}
 .header .header_sound {
   width: 5%;
   height: 9%;
@@ -30,9 +37,15 @@
   right: 2%;
   top: 2%;
   cursor: pointer;
+  transition: 0.3s;
+}
+.header .header_sound:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 .header .header_sound:active {
-  top: 2.2%;
+  transform: scale(0.9);
+  transition: 0.3s;
 }
 .header .work_in_progress {
   width: 20%;
@@ -84,7 +97,7 @@
 .comix_section .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
@@ -92,8 +105,8 @@
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate(0, 100%);
-    transform: translate(0, 100%);
+    -webkit-transform: translate(0, 20%);
+    transform: translate(0, 20%);
   }
   100% {
     opacity: 1;
@@ -104,8 +117,8 @@
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate(0, 100%);
-    transform: translate(0, 100%);
+    -webkit-transform: translate(0, 20%);
+    transform: translate(0, 20%);
   }
   100% {
     opacity: 1;
@@ -116,16 +129,17 @@
 .comix_section .fadeInLeftBig {
   -webkit-animation-name: fadeInLeftBig;
   animation-name: fadeInLeftBig;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 0.8s;
   animation-duration: 0.8s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  animation-delay: 0.3s;
 }
-@-webkit-keyframes fadeInLeftBig {
+@keyframes fadeInLeftBig {
   0% {
     opacity: 0;
-    -webkit-transform: translate(-2000px, 0);
-    transform: translate(-2000px, 0);
+    -webkit-transform: translate(-200px, 200px);
+    transform: translate(-200px, 200px);
   }
   100% {
     opacity: 1;
@@ -133,11 +147,11 @@
     transform: none;
   }
 }
-@keyframes fadeInLeftBig {
+@-webkit-keyframes fadeInLeftBig {
   0% {
     opacity: 0;
     -webkit-transform: translate(-2000px, 0);
-    transform: translate(-2000px, 0);
+    transform: translate(-20px, 0);
   }
   100% {
     opacity: 1;
@@ -170,9 +184,15 @@
   top: -23%;
   z-index: 10;
   cursor: pointer;
+  transition: 0.3s;
+}
+.canna_slider .slider .button_prev:hover, .canna_slider .slider .button_next:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 .canna_slider .slider .button_prev:active, .canna_slider .slider .button_next:active {
-  top: -22.7%;
+  transform: scale(0.9);
+  transition: 0.3s;
 }
 .canna_slider .slider .button_prev {
   right: 10%;
@@ -184,12 +204,15 @@
 .footer {
   display: flex;
   justify-content: center;
-  padding-top: 25%;
+  padding-top: 24%;
   background-image: url("../assets/footer/footer_bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   margin-top: -27%;
+}
+.footer .opacity {
+  opacity: 0;
 }
 .footer .canna_container {
   display: flex;
@@ -198,16 +221,36 @@
   margin: auto;
 }
 .footer .continued {
-  width: 27.9%;
-  height: 33%;
+  width: 19%;
+  height: 30%;
   position: absolute;
-  bottom: 2px;
+  bottom: 0;
   right: 0;
+}
+.footer .continued .canna {
+  width: 100%;
+  position: absolute;
+  height: 99%;
+  bottom: 0;
+  z-index: 10;
+  right: 0;
+}
+.footer .continued .canna_bubble {
+  width: 80%;
+  right: 68%;
+  position: absolute;
+  bottom: 43%;
+}
+.footer .hovered {
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 .footer .insta {
   position: absolute;
   width: 25%;
-  left: 63%;
+  left: 64%;
+  bottom: 40%;
+  transition: 0.3s;
 }
 .footer .insta a {
   width: 70%;
@@ -218,11 +261,16 @@
   left: 10%;
   z-index: 100;
 }
+.footer .insta:active {
+  transform: scale(1);
+  transition: 0.2s;
+}
 .footer .discord {
   position: absolute;
   width: 30%;
   left: 15%;
   bottom: 35%;
+  transition: 0.3s;
 }
 .footer .discord a {
   width: 70%;
@@ -234,10 +282,16 @@
   left: 12%;
   z-index: 100;
 }
+.footer .discord:active {
+  transform: scale(1);
+  transition: 0.2s;
+}
 .footer .twitter {
   position: absolute;
   width: 25%;
   left: 9%;
+  bottom: 17%;
+  transition: 0.3s;
 }
 .footer .twitter a {
   width: 70%;
@@ -248,6 +302,117 @@
   top: 5%;
   left: 12%;
   z-index: 100;
+}
+.footer .twitter:active {
+  transform: scale(1);
+  transition: 0.2s;
+}
+.footer .fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(30px, 0);
+    transform: translate(30px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(2000px, 0);
+    transform: translate(2000px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.footer .bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 0.7s;
+  animation-delay: 0.7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3, 0.3);
+    transform: scale(0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(1.03, 1.03);
+    transform: scale(1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale(0.97, 0.97);
+    transform: scale(0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+@keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3, 0.3);
+    transform: scale(0.3, 0.3);
+  }
+  20% {
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
+  40% {
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(1.03, 1.03);
+    transform: scale(1.03, 1.03);
+  }
+  80% {
+    -webkit-transform: scale(0.97, 0.97);
+    transform: scale(0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
 }
 
 .teamSection {
@@ -290,20 +455,25 @@
 .teamSection .teamSection_main .ramazan {
   width: 27%;
   position: relative;
-  margin-bottom: 4%;
-  transform: scale(1);
+  margin-bottom: 5%;
   transition: 0.3s;
-  z-index: 11;
 }
-.teamSection .teamSection_main .leo:hover,
-.teamSection .teamSection_main .anna:hover,
-.teamSection .teamSection_main .fedor:hover,
-.teamSection .teamSection_main .filip:hover,
-.teamSection .teamSection_main .vojta:hover,
-.teamSection .teamSection_main .ramazan:hover {
+.teamSection .teamSection_main .leo img,
+.teamSection .teamSection_main .anna img,
+.teamSection .teamSection_main .fedor img,
+.teamSection .teamSection_main .filip img,
+.teamSection .teamSection_main .vojta img,
+.teamSection .teamSection_main .ramazan img {
+  transition: 0.3s;
+}
+.teamSection .teamSection_main .leo .hovered,
+.teamSection .teamSection_main .anna .hovered,
+.teamSection .teamSection_main .fedor .hovered,
+.teamSection .teamSection_main .filip .hovered,
+.teamSection .teamSection_main .vojta .hovered,
+.teamSection .teamSection_main .ramazan .hovered {
   transform: scale(1.1);
   transition: 0.3s;
-  z-index: 12;
 }
 .teamSection .teamSection_main .leo .leo_bubble,
 .teamSection .teamSection_main .leo .anna_bubble,
@@ -341,10 +511,49 @@
 .teamSection .teamSection_main .ramazan .filip_bubble,
 .teamSection .teamSection_main .ramazan .vojta_bubble,
 .teamSection .teamSection_main .ramazan .ramazan_bubble {
-  width: 70%;
+  width: 95%;
   position: absolute;
-  z-index: 10;
-  font-size: 1.3vw;
+  z-index: 20;
+  font-size: 1.2vw;
+  text-align: center;
+}
+.teamSection .teamSection_main .leo .leo_bubble p,
+.teamSection .teamSection_main .leo .anna_bubble p,
+.teamSection .teamSection_main .leo .fedor_bubble p,
+.teamSection .teamSection_main .leo .filip_bubble p,
+.teamSection .teamSection_main .leo .vojta_bubble p,
+.teamSection .teamSection_main .leo .ramazan_bubble p,
+.teamSection .teamSection_main .anna .leo_bubble p,
+.teamSection .teamSection_main .anna .anna_bubble p,
+.teamSection .teamSection_main .anna .fedor_bubble p,
+.teamSection .teamSection_main .anna .filip_bubble p,
+.teamSection .teamSection_main .anna .vojta_bubble p,
+.teamSection .teamSection_main .anna .ramazan_bubble p,
+.teamSection .teamSection_main .fedor .leo_bubble p,
+.teamSection .teamSection_main .fedor .anna_bubble p,
+.teamSection .teamSection_main .fedor .fedor_bubble p,
+.teamSection .teamSection_main .fedor .filip_bubble p,
+.teamSection .teamSection_main .fedor .vojta_bubble p,
+.teamSection .teamSection_main .fedor .ramazan_bubble p,
+.teamSection .teamSection_main .filip .leo_bubble p,
+.teamSection .teamSection_main .filip .anna_bubble p,
+.teamSection .teamSection_main .filip .fedor_bubble p,
+.teamSection .teamSection_main .filip .filip_bubble p,
+.teamSection .teamSection_main .filip .vojta_bubble p,
+.teamSection .teamSection_main .filip .ramazan_bubble p,
+.teamSection .teamSection_main .vojta .leo_bubble p,
+.teamSection .teamSection_main .vojta .anna_bubble p,
+.teamSection .teamSection_main .vojta .fedor_bubble p,
+.teamSection .teamSection_main .vojta .filip_bubble p,
+.teamSection .teamSection_main .vojta .vojta_bubble p,
+.teamSection .teamSection_main .vojta .ramazan_bubble p,
+.teamSection .teamSection_main .ramazan .leo_bubble p,
+.teamSection .teamSection_main .ramazan .anna_bubble p,
+.teamSection .teamSection_main .ramazan .fedor_bubble p,
+.teamSection .teamSection_main .ramazan .filip_bubble p,
+.teamSection .teamSection_main .ramazan .vojta_bubble p,
+.teamSection .teamSection_main .ramazan .ramazan_bubble p {
+  width: 70%;
 }
 .teamSection .teamSection_main .leo .leo_bubble,
 .teamSection .teamSection_main .anna .leo_bubble,
@@ -352,8 +561,8 @@
 .teamSection .teamSection_main .filip .leo_bubble,
 .teamSection .teamSection_main .vojta .leo_bubble,
 .teamSection .teamSection_main .ramazan .leo_bubble {
-  top: 65%;
-  left: 30%;
+  top: 60%;
+  left: 20%;
 }
 .teamSection .teamSection_main .leo .leo_bubble p,
 .teamSection .teamSection_main .anna .leo_bubble p,
@@ -362,7 +571,7 @@
 .teamSection .teamSection_main .vojta .leo_bubble p,
 .teamSection .teamSection_main .ramazan .leo_bubble p {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 15%;
 }
 .teamSection .teamSection_main .leo .filip_bubble,
@@ -371,8 +580,8 @@
 .teamSection .teamSection_main .filip .filip_bubble,
 .teamSection .teamSection_main .vojta .filip_bubble,
 .teamSection .teamSection_main .ramazan .filip_bubble {
-  top: 63%;
-  left: 35%;
+  top: 60%;
+  left: 20%;
 }
 .teamSection .teamSection_main .leo .filip_bubble p,
 .teamSection .teamSection_main .anna .filip_bubble p,
@@ -390,8 +599,9 @@
 .teamSection .teamSection_main .filip .vojta_bubble,
 .teamSection .teamSection_main .vojta .vojta_bubble,
 .teamSection .teamSection_main .ramazan .vojta_bubble {
+  width: 110%;
   top: 60%;
-  left: 0;
+  left: -10%;
 }
 .teamSection .teamSection_main .leo .vojta_bubble p,
 .teamSection .teamSection_main .anna .vojta_bubble p,
@@ -399,9 +609,10 @@
 .teamSection .teamSection_main .filip .vojta_bubble p,
 .teamSection .teamSection_main .vojta .vojta_bubble p,
 .teamSection .teamSection_main .ramazan .vojta_bubble p {
+  width: 80%;
   position: absolute;
-  top: 40%;
-  left: 15%;
+  top: 35%;
+  left: 10%;
 }
 .teamSection .teamSection_main .leo .ramazan_bubble,
 .teamSection .teamSection_main .anna .ramazan_bubble,
@@ -410,7 +621,7 @@
 .teamSection .teamSection_main .vojta .ramazan_bubble,
 .teamSection .teamSection_main .ramazan .ramazan_bubble {
   top: 60%;
-  left: 12%;
+  left: 5%;
 }
 .teamSection .teamSection_main .leo .ramazan_bubble p,
 .teamSection .teamSection_main .anna .ramazan_bubble p,
@@ -428,8 +639,8 @@
 .teamSection .teamSection_main .filip .anna_bubble,
 .teamSection .teamSection_main .vojta .anna_bubble,
 .teamSection .teamSection_main .ramazan .anna_bubble {
-  top: -2%;
-  left: -22%;
+  top: -20%;
+  left: -40%;
 }
 .teamSection .teamSection_main .leo .anna_bubble p,
 .teamSection .teamSection_main .anna .anna_bubble p,
@@ -438,7 +649,7 @@
 .teamSection .teamSection_main .vojta .anna_bubble p,
 .teamSection .teamSection_main .ramazan .anna_bubble p {
   position: absolute;
-  top: 25%;
+  top: 20%;
   left: 15%;
 }
 .teamSection .teamSection_main .leo .fedor_bubble,
@@ -447,8 +658,9 @@
 .teamSection .teamSection_main .filip .fedor_bubble,
 .teamSection .teamSection_main .vojta .fedor_bubble,
 .teamSection .teamSection_main .ramazan .fedor_bubble {
-  top: 4%;
-  left: -30%;
+  top: -15%;
+  left: -40%;
+  width: 110%;
 }
 .teamSection .teamSection_main .leo .fedor_bubble p,
 .teamSection .teamSection_main .anna .fedor_bubble p,
@@ -456,15 +668,14 @@
 .teamSection .teamSection_main .filip .fedor_bubble p,
 .teamSection .teamSection_main .vojta .fedor_bubble p,
 .teamSection .teamSection_main .ramazan .fedor_bubble p {
+  width: 80%;
   position: absolute;
-  top: 30%;
-  left: 15%;
+  top: 24%;
+  left: 8%;
 }
 .teamSection .bounceIn {
   -webkit-animation-name: bounceIn;
   animation-name: bounceIn;
-  -webkit-animation-duration: 0.75s;
-  animation-duration: 0.75s;
   -webkit-animation-duration: 1s;
   animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
@@ -500,23 +711,11 @@
 .teamSection .zoomOut {
   -webkit-animation-name: zoomOut;
   animation-name: zoomOut;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-}
-@-webkit-keyframes zoomOut {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-    -webkit-transform: scale(0.3, 0.3);
-    transform: scale(0.3, 0.3);
-  }
-  100% {
-    opacity: 0;
-  }
+  display: none;
 }
 @keyframes zoomOut {
   0% {
@@ -531,9 +730,23 @@
     opacity: 0;
   }
 }
+@-webkit-keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale(0.3, 0.3);
+    transform: scale(0.3, 0.3);
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 body {
-  background-color: white;
+  overflow-x: hidden;
+  background-color: black;
 }
 
 * {
@@ -544,11 +757,15 @@ body {
 }
 
 .wrapper {
-  width: 90%;
-  padding: 0;
+  width: 93%;
   margin: auto;
-  border-right: 5px solid black;
+  background-color: white;
+  padding: 0 2%;
+}
+
+.wrapper_commix {
   border-left: 5px solid black;
+  border-right: 5px solid black;
 }
 
 img {

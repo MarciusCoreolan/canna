@@ -27,55 +27,58 @@ function TeamSection({ onLoad }) {
       imgClass: "leo",
       bubbleClass: "leo_bubble",
       bubble: leo_bubble,
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      text: "Our all-mighty father, and owner of the braincells responsible for this. He’s also surgeon, he mentions that frequently with much self-satisfaction. ",
     },
     {
       img: filip,
       imgClass: "filip",
       bubbleClass: "filip_bubble",
       bubble: filip_bubble,
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      text: "The babyfaced, melancholic skipper that manages the futile task of bringing harmony, and identity to all our creative fruits of labour.",
     },
     {
       img: vojta,
       imgClass: "vojta",
       bubbleClass: "vojta_bubble",
       bubble: vojta_bubble,
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      text: "The Artist and Creator. Let’s just say what his dreams are made of must be wild. Anyways, if Leo is the father, then Vojta must be the mother, his imagination and hands have birthed us into existence. ",
     },
     {
       img: ramazan,
       imgClass: "ramazan",
       bubbleClass: "ramazan_bubble",
       bubble: ramazan_bubble,
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      text: "Lead Designer. The space a-ranger of our visual representation. If you piss him off, he’ll draw a mean picture of you.",
     },
     {
       img: anna,
       imgClass: "anna",
       bubbleClass: "anna_bubble",
       bubble: anna_bubble,
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      text: "Content Editor. She reads at least 3 books a day and uses big words, when she’s not daydreaming or reciting random poetry, she’s our lingo expert.",
     },
     {
       img: fedor,
       imgClass: "fedor",
       bubbleClass: "fedor_bubble",
       bubble: fedor_bubble,
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+      text: "R. Т., COO and CTO. Our R2-D2 tech-army minion leading go to geek that really likes the sound of his own voice/signals, we wouldn really know our butts from our toes without him, keeps us in line.",
     },
   ];
-  const [imgIndex, setImgIndex] = useState(null);
+  const [imgIndex, setImgIndex] = useState(false);
 
   const mouseOver = (index) => {
     setImgIndex(index);
   };
+
   const mouseOut = () => {
-    setImgIndex(null);
+    setImgIndex(false);
   };
 
   return (
-    <div className={`teamSection ${!onLoad && isBrowser ? "minHeight" : ""}`}>
+    <div className={`teamSection ${!onLoad && isBrowser ? "minHeight" : ""}`}
+         onMouseOut={mouseOut}
+    >
       <BrowserView>
         <div className={"teamSection_title"}>
           <div className={"the"}>
@@ -93,23 +96,23 @@ function TeamSection({ onLoad }) {
                 <div
                   className={`${item.imgClass}`}
                   key={index}
-                  onMouseOut={mouseOut}
-                  onMouseOver={() => {
-                    mouseOver(index);
+                  onMouseOver={(e) => {
+                    mouseOver(index,e);
                   }}
                 >
-                  <img src={item.img} alt="" />
-                  <div className={`${item.bubbleClass} ${imgIndex === index ? 'bounceIn' : 'zoomOut'}`}>
-                    <img src={item.bubble} alt="" />
-                    <p>{item.text}</p>
-                  </div>
+                    <img  src={item.img} alt="" className={`${index === imgIndex && 'hovered'}`}/>
+
+                      <div className={`${item.bubbleClass} ${index === imgIndex ? 'bounceIn' : 'zoomOut'}`}>
+                        <img src={item.bubble} alt="" />
+                        <p>{item.text}</p>
+                    </div>
                 </div>
               );
             })}
           </div>
         </div>
       </BrowserView>
-{/*=================================================================================== Mobile*/}
+      {/*=================================================================================== Mobile*/}
       <MobileView>
         <div className={"teamSection_title"}>
           <div className={"the"}>
@@ -124,16 +127,13 @@ function TeamSection({ onLoad }) {
           <div className={"teamSection_container"}>
             {team.map((item, index) => {
               return (
-                  <div
-                      className={`${item.imgClass}`}
-                      key={index}
-                  >
-                    <img src={item.img} alt="" />
-                    <div className={`${item.bubbleClass}`}>
-                      <img src={item.bubble} alt="" />
-                      <p>{item.text}</p>
-                    </div>
+                <div className={`${item.imgClass}`} key={index}>
+                  <img src={item.img} alt="" />
+                  <div className={`${item.bubbleClass}`}>
+                    <img src={item.bubble} alt="" />
+                    <p>{item.text}</p>
                   </div>
+                </div>
               );
             })}
           </div>

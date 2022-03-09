@@ -1,12 +1,16 @@
 .footer{
   display: flex;
   justify-content: center;
-  padding-top: 25%;
+  padding-top: 24%;
   background-image: url("../assets/footer/footer_bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   margin-top: -27%;
+
+  .opacity{
+    opacity: 0;
+  }
 
   .canna_container{
     display: flex;
@@ -15,16 +19,39 @@
     margin: auto;
   }
   .continued{
-    width: 27.9%;
-    height: 33%;
+    width: 19%;
+    height: 30%;
     position: absolute;
-    bottom: 2px;
+    bottom: 0;
     right: 0;
+
+    .canna{
+      width: 100%;
+      position: absolute;
+      height: 99%;
+      bottom: 0;
+      z-index: 10;
+      right: 0;
+    }
+    .canna_bubble{
+      width: 80%;
+      right: 68%;
+      position: absolute;
+      bottom: 43%;
+    }
+  }
+
+  .hovered{
+      transform: scale(1.05);
+      transition: 0.3s;
   }
   .insta{
     position: absolute;
     width: 25%;
-    left: 63%;
+    left: 64%;
+    bottom: 40%;
+    transition: 0.3s;
+
     a{
       width: 70%;
       height: 55%;
@@ -34,12 +61,19 @@
       left: 10%;
       z-index: 100;
     }
+    &:active{
+      transform: scale(1);
+      transition: 0.2s;
+    }
+
   }
   .discord{
     position: absolute;
     width: 30%;
     left: 15%;
     bottom: 35%;
+    transition: 0.3s;
+
     a{
       width: 70%;
       height: 50%;
@@ -50,11 +84,18 @@
       left: 12%;
       z-index: 100;
     }
+    &:active{
+      transform: scale(1);
+      transition: 0.2s;
+    }
   }
   .twitter{
     position: absolute;
     width: 25%;
     left: 9%;
+    bottom: 17%;
+    transition: 0.3s;
+
     a{
       width: 70%;
       height: 70%;
@@ -65,5 +106,121 @@
       left: 12%;
       z-index: 100;
     }
+    &:active{
+      transform: scale(1);
+      transition: 0.2s;
+    }
   }
+
+//======================================================= Animation
+
+  .fadeInRightBig {
+    -webkit-animation-name: fadeInRightBig;
+    animation-name: fadeInRightBig;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  @-webkit-keyframes fadeInRightBig {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate(30px, 0);
+      transform: translate(30px, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @keyframes fadeInRightBig {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate(2000px, 0);
+      transform: translate(2000px, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  .bounceIn {
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 0.7s;
+    animation-delay: 0.7s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  @-webkit-keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+      -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(.3, .3);
+      transform: scale(.3, .3);
+    }
+    20% {
+      -webkit-transform: scale(1.1, 1.1);
+      transform: scale(1.1, 1.1);
+    }
+    40% {
+      -webkit-transform: scale(.9, .9);
+      transform: scale(.9, .9);
+    }
+    60% {
+      opacity: 1;
+      -webkit-transform: scale(1.03, 1.03);
+      transform: scale(1.03, 1.03);
+    }
+    80% {
+      -webkit-transform: scale(.97, .97);
+      transform: scale(.97, .97);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+    }
+  }
+  @keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+      -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(.3, .3);
+      transform: scale(.3, .3);
+    }
+    20% {
+      -webkit-transform: scale(1.1, 1.1);
+      transform: scale(1.1, 1.1);
+    }
+    40% {
+      -webkit-transform: scale(.9, .9);
+      transform: scale(.9, .9);
+    }
+    60% {
+      opacity: 1;
+      -webkit-transform: scale(1.03, 1.03);
+      transform: scale(1.03, 1.03);
+    }
+    80% {
+      -webkit-transform: scale(.97, .97);
+      transform: scale(.97, .97);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+    }
+  }
+
 }

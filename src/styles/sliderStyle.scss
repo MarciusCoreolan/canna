@@ -21,8 +21,14 @@
       top: -23%;
       z-index: 10;
       cursor: pointer;
+      transition: 0.3s;
+      &:hover{
+        transform: scale(1.05);
+        transition: 0.3s;
+      }
       &:active{
-        top: -22.7%;
+        transform: scale(0.9);
+        transition: 0.3s;
       }
     }
     .button_prev{

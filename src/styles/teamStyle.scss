@@ -10,11 +10,9 @@
     position: absolute;
     top: 7%;
     left: 10%;
-
     .the {
       width: 20%;
     }
-
     .team_title {
       width: 35%;
       margin-left: -30px;
@@ -42,15 +40,14 @@
     .ramazan {
       width: 27%;
       position: relative;
-      margin-bottom: 4%;
-      transform: scale(1);
+      margin-bottom: 5%;
       transition: 0.3s;
-      z-index: 11;
-
-      &:hover {
-        transform: scale(1.1);
+      img{
         transition: 0.3s;
-        z-index: 12;
+      }
+      .hovered{
+          transform: scale(1.1);
+          transition: 0.3s;
       }
 
       .leo_bubble,
@@ -59,26 +56,31 @@
       .filip_bubble,
       .vojta_bubble,
       .ramazan_bubble {
-        width: 70%;
+        width: 95%;
         position: absolute;
-        z-index: 10;
-        font-size: 1.3vw;
+        z-index: 20;
+        font-size: 1.2vw;
+        text-align: center;
+
+        p{
+          width: 70%;
+        }
       }
 
       .leo_bubble {
-        top: 65%;
-        left: 30%;
+        top: 60%;
+        left: 20%;
 
         p {
           position: absolute;
-          top: 40%;
+          top: 35%;
           left: 15%;
         }
       }
 
       .filip_bubble {
-        top: 63%;
-        left: 35%;
+        top: 60%;
+        left: 20%;
 
         p {
           position: absolute;
@@ -88,19 +90,21 @@
       }
 
       .vojta_bubble {
+        width: 110%;
         top: 60%;
-        left: 0;
+        left: -10%;
 
         p {
+          width: 80%;
           position: absolute;
-          top: 40%;
-          left: 15%;
+          top: 35%;
+          left: 10%;
         }
       }
 
       .ramazan_bubble {
         top: 60%;
-        left: 12%;
+        left: 5%;
 
         p {
           position: absolute;
@@ -110,24 +114,25 @@
       }
 
       .anna_bubble {
-        top: -2%;
-        left: -22%;
+        top: -20%;
+        left: -40%;
 
         p {
           position: absolute;
-          top: 25%;
+          top: 20%;
           left: 15%;
         }
       }
 
       .fedor_bubble {
-        top: 4%;
-        left: -30%;
-
+        top: -15%;
+        left: -40%;
+        width: 110%;
         p {
+          width: 80%;
           position: absolute;
-          top: 30%;
-          left: 15%;
+          top: 24%;
+          left: 8%;
         }
       }
     }
@@ -137,8 +142,6 @@
   .bounceIn {
     -webkit-animation-name: bounceIn;
     animation-name: bounceIn;
-    -webkit-animation-duration: 0.75s;
-    animation-duration: 0.75s;
     -webkit-animation-duration: 1s;
     animation-duration: 0.5s;
     -webkit-animation-fill-mode: both;
@@ -180,17 +183,16 @@
   .zoomOut {
     -webkit-animation-name: zoomOut;
     animation-name: zoomOut;
-    -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+    display: none;
   }
-
-  @-webkit-keyframes zoomOut {
+  @keyframes zoomOut {
     0% {
       opacity: 1;
     }
-
     50% {
       opacity: 0;
       -webkit-transform: scale(.3, .3);
@@ -200,7 +202,7 @@
       opacity: 0;
     }
   }
-  @keyframes zoomOut {
+  @-webkit-keyframes zoomOut {
     0% {
       opacity: 1;
     }
