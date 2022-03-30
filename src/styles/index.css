@@ -62,9 +62,39 @@
   margin-left: 3%;
   width: 86%;
 }
+.header .sound {
+  animation: shadow 1s ease infinite;
+  border-radius: 50%;
+}
+@keyframes shadow {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 30px rgba(90, 153, 212, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+  }
+}
 
 .comix_section {
   position: relative;
+  min-height: 100vw;
+  background-size: cover;
+}
+.comix_section .comix_frame {
+  position: relative;
+  z-index: 2;
+}
+.comix_section .comix_canna_bg {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 5%;
 }
 .comix_section .opacity {
   opacity: 0;
@@ -72,27 +102,30 @@
 .comix_section .bubble_top {
   position: absolute;
   width: 35%;
+  z-index: 6;
   top: 15%;
   left: 38%;
 }
 .comix_section .bubble_bottom {
   position: absolute;
-  width: 41%;
-  top: 49%;
+  width: 38%;
+  top: 51%;
   left: 29%;
+  z-index: 7;
 }
 .comix_section .comix_text {
   position: absolute;
-  width: 40%;
-  bottom: 6.2%;
-  left: 5%;
+  width: 38%;
+  bottom: 6.5%;
+  left: 6%;
   z-index: 100;
 }
 .comix_section .canna_pop_up {
   width: 15.6%;
   position: absolute;
-  bottom: 6.2%;
+  bottom: 6%;
   left: 0;
+  z-index: 1;
 }
 .comix_section .fadeInUp {
   -webkit-animation-name: fadeInUp;
@@ -161,36 +194,63 @@
 }
 
 .canna_slider {
-  margin: -17% 0 -15%;
-  background-image: url("../assets/slider/slider_bg.webp");
+  margin: -27% 0 -15%;
+  background-image: url("../assets/slider/slider_bg.png");
   background-size: cover;
   display: flex;
   align-items: center;
   background-repeat: no-repeat;
-  padding: 20% 0;
+  padding: 20% 0 7%;
+  position: relative;
 }
 .canna_slider .slider {
   width: 100%;
-  padding: 0;
-  margin: 0;
   position: relative;
+  display: flex;
+  margin: 4% 0 5%;
+}
+.canna_slider .slider .slide {
+  width: 100%;
+  margin-top: -3%;
+  padding-bottom: 5%;
+}
+.canna_slider .slider .slide .slide1_text {
+  width: 25%;
+  position: absolute;
+  bottom: 17%;
+  left: 5%;
+}
+.canna_slider .slider .slide .slide2_text {
+  width: 25%;
+  position: absolute;
+  bottom: 10%;
+  left: 38%;
+}
+.canna_slider .slider .slide .slide3_text {
+  width: 12%;
+  position: absolute;
+  bottom: 10%;
+  left: 76.5%;
 }
 .canna_slider .slider * {
   margin: 0;
 }
-.canna_slider .slider .button_prev, .canna_slider .slider .button_next {
+.canna_slider .slider .button_prev,
+.canna_slider .slider .button_next {
   position: absolute;
   width: 5%;
-  top: -23%;
-  z-index: 10;
+  top: -7%;
+  z-index: 100;
   cursor: pointer;
   transition: 0.3s;
 }
-.canna_slider .slider .button_prev:hover, .canna_slider .slider .button_next:hover {
+.canna_slider .slider .button_prev:hover,
+.canna_slider .slider .button_next:hover {
   transform: scale(1.05);
   transition: 0.3s;
 }
-.canna_slider .slider .button_prev:active, .canna_slider .slider .button_next:active {
+.canna_slider .slider .button_prev:active,
+.canna_slider .slider .button_next:active {
   transform: scale(0.9);
   transition: 0.3s;
 }
@@ -210,6 +270,7 @@
   background-size: cover;
   position: relative;
   margin-top: -27%;
+  z-index: 2;
 }
 .footer .opacity {
   opacity: 0;
@@ -420,23 +481,22 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  z-index: 2;
 }
 .teamSection .teamSection_title {
   display: flex;
   width: 70%;
   position: absolute;
-  top: 7%;
+  top: 2.3%;
   left: 10%;
+  text-align: center;
+  justify-content: center;
 }
 .teamSection .teamSection_title .the {
-  width: 20%;
-}
-.teamSection .teamSection_title .team_title {
-  width: 35%;
-  margin-left: -30px;
+  width: 50%;
 }
 .teamSection .teamSection_main {
-  padding: 18% 0 26%;
+  padding: 12% 0 26%;
   width: 90%;
   margin: auto;
   position: relative;
@@ -453,9 +513,9 @@
 .teamSection .teamSection_main .filip,
 .teamSection .teamSection_main .vojta,
 .teamSection .teamSection_main .ramazan {
-  width: 27%;
+  width: 28%;
   position: relative;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   transition: 0.3s;
 }
 .teamSection .teamSection_main .leo img,
@@ -511,49 +571,73 @@
 .teamSection .teamSection_main .ramazan .filip_bubble,
 .teamSection .teamSection_main .ramazan .vojta_bubble,
 .teamSection .teamSection_main .ramazan .ramazan_bubble {
-  width: 95%;
   position: absolute;
   z-index: 20;
   font-size: 1.2vw;
   text-align: center;
 }
-.teamSection .teamSection_main .leo .leo_bubble p,
-.teamSection .teamSection_main .leo .anna_bubble p,
-.teamSection .teamSection_main .leo .fedor_bubble p,
-.teamSection .teamSection_main .leo .filip_bubble p,
-.teamSection .teamSection_main .leo .vojta_bubble p,
-.teamSection .teamSection_main .leo .ramazan_bubble p,
-.teamSection .teamSection_main .anna .leo_bubble p,
-.teamSection .teamSection_main .anna .anna_bubble p,
-.teamSection .teamSection_main .anna .fedor_bubble p,
-.teamSection .teamSection_main .anna .filip_bubble p,
-.teamSection .teamSection_main .anna .vojta_bubble p,
-.teamSection .teamSection_main .anna .ramazan_bubble p,
-.teamSection .teamSection_main .fedor .leo_bubble p,
-.teamSection .teamSection_main .fedor .anna_bubble p,
-.teamSection .teamSection_main .fedor .fedor_bubble p,
-.teamSection .teamSection_main .fedor .filip_bubble p,
-.teamSection .teamSection_main .fedor .vojta_bubble p,
-.teamSection .teamSection_main .fedor .ramazan_bubble p,
-.teamSection .teamSection_main .filip .leo_bubble p,
-.teamSection .teamSection_main .filip .anna_bubble p,
-.teamSection .teamSection_main .filip .fedor_bubble p,
-.teamSection .teamSection_main .filip .filip_bubble p,
-.teamSection .teamSection_main .filip .vojta_bubble p,
-.teamSection .teamSection_main .filip .ramazan_bubble p,
-.teamSection .teamSection_main .vojta .leo_bubble p,
-.teamSection .teamSection_main .vojta .anna_bubble p,
-.teamSection .teamSection_main .vojta .fedor_bubble p,
-.teamSection .teamSection_main .vojta .filip_bubble p,
-.teamSection .teamSection_main .vojta .vojta_bubble p,
-.teamSection .teamSection_main .vojta .ramazan_bubble p,
-.teamSection .teamSection_main .ramazan .leo_bubble p,
-.teamSection .teamSection_main .ramazan .anna_bubble p,
-.teamSection .teamSection_main .ramazan .fedor_bubble p,
-.teamSection .teamSection_main .ramazan .filip_bubble p,
-.teamSection .teamSection_main .ramazan .vojta_bubble p,
-.teamSection .teamSection_main .ramazan .ramazan_bubble p {
-  width: 70%;
+.teamSection .teamSection_main .leo .leo_bubble .bubble_text_title,
+.teamSection .teamSection_main .leo .anna_bubble .bubble_text_title,
+.teamSection .teamSection_main .leo .fedor_bubble .bubble_text_title,
+.teamSection .teamSection_main .leo .filip_bubble .bubble_text_title,
+.teamSection .teamSection_main .leo .vojta_bubble .bubble_text_title,
+.teamSection .teamSection_main .leo .ramazan_bubble .bubble_text_title,
+.teamSection .teamSection_main .anna .leo_bubble .bubble_text_title,
+.teamSection .teamSection_main .anna .anna_bubble .bubble_text_title,
+.teamSection .teamSection_main .anna .fedor_bubble .bubble_text_title,
+.teamSection .teamSection_main .anna .filip_bubble .bubble_text_title,
+.teamSection .teamSection_main .anna .vojta_bubble .bubble_text_title,
+.teamSection .teamSection_main .anna .ramazan_bubble .bubble_text_title,
+.teamSection .teamSection_main .fedor .leo_bubble .bubble_text_title,
+.teamSection .teamSection_main .fedor .anna_bubble .bubble_text_title,
+.teamSection .teamSection_main .fedor .fedor_bubble .bubble_text_title,
+.teamSection .teamSection_main .fedor .filip_bubble .bubble_text_title,
+.teamSection .teamSection_main .fedor .vojta_bubble .bubble_text_title,
+.teamSection .teamSection_main .fedor .ramazan_bubble .bubble_text_title,
+.teamSection .teamSection_main .filip .leo_bubble .bubble_text_title,
+.teamSection .teamSection_main .filip .anna_bubble .bubble_text_title,
+.teamSection .teamSection_main .filip .fedor_bubble .bubble_text_title,
+.teamSection .teamSection_main .filip .filip_bubble .bubble_text_title,
+.teamSection .teamSection_main .filip .vojta_bubble .bubble_text_title,
+.teamSection .teamSection_main .filip .ramazan_bubble .bubble_text_title,
+.teamSection .teamSection_main .vojta .leo_bubble .bubble_text_title,
+.teamSection .teamSection_main .vojta .anna_bubble .bubble_text_title,
+.teamSection .teamSection_main .vojta .fedor_bubble .bubble_text_title,
+.teamSection .teamSection_main .vojta .filip_bubble .bubble_text_title,
+.teamSection .teamSection_main .vojta .vojta_bubble .bubble_text_title,
+.teamSection .teamSection_main .vojta .ramazan_bubble .bubble_text_title,
+.teamSection .teamSection_main .ramazan .leo_bubble .bubble_text_title,
+.teamSection .teamSection_main .ramazan .anna_bubble .bubble_text_title,
+.teamSection .teamSection_main .ramazan .fedor_bubble .bubble_text_title,
+.teamSection .teamSection_main .ramazan .filip_bubble .bubble_text_title,
+.teamSection .teamSection_main .ramazan .vojta_bubble .bubble_text_title,
+.teamSection .teamSection_main .ramazan .ramazan_bubble .bubble_text_title {
+  font-size: 2.1vw;
+  color: white;
+  text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+  -webkit-text-stroke-width: 0.1vw;
+  -webkit-text-stroke-color: #000;
+}
+.teamSection .teamSection_main .leo .filip_bubble,
+.teamSection .teamSection_main .anna .filip_bubble,
+.teamSection .teamSection_main .fedor .filip_bubble,
+.teamSection .teamSection_main .filip .filip_bubble,
+.teamSection .teamSection_main .vojta .filip_bubble,
+.teamSection .teamSection_main .ramazan .filip_bubble {
+  top: 68%;
+  left: 20%;
+  width: 89%;
+}
+.teamSection .teamSection_main .leo .filip_bubble .bubble_text,
+.teamSection .teamSection_main .anna .filip_bubble .bubble_text,
+.teamSection .teamSection_main .fedor .filip_bubble .bubble_text,
+.teamSection .teamSection_main .filip .filip_bubble .bubble_text,
+.teamSection .teamSection_main .vojta .filip_bubble .bubble_text,
+.teamSection .teamSection_main .ramazan .filip_bubble .bubble_text {
+  width: 80%;
+  position: absolute;
+  top: 20%;
+  left: 10%;
 }
 .teamSection .teamSection_main .leo .leo_bubble,
 .teamSection .teamSection_main .anna .leo_bubble,
@@ -562,36 +646,20 @@
 .teamSection .teamSection_main .vojta .leo_bubble,
 .teamSection .teamSection_main .ramazan .leo_bubble {
   top: 60%;
-  left: 20%;
+  left: -15%;
+  width: 100%;
 }
-.teamSection .teamSection_main .leo .leo_bubble p,
-.teamSection .teamSection_main .anna .leo_bubble p,
-.teamSection .teamSection_main .fedor .leo_bubble p,
-.teamSection .teamSection_main .filip .leo_bubble p,
-.teamSection .teamSection_main .vojta .leo_bubble p,
-.teamSection .teamSection_main .ramazan .leo_bubble p {
+.teamSection .teamSection_main .leo .leo_bubble .bubble_text,
+.teamSection .teamSection_main .anna .leo_bubble .bubble_text,
+.teamSection .teamSection_main .fedor .leo_bubble .bubble_text,
+.teamSection .teamSection_main .filip .leo_bubble .bubble_text,
+.teamSection .teamSection_main .vojta .leo_bubble .bubble_text,
+.teamSection .teamSection_main .ramazan .leo_bubble .bubble_text {
+  width: 80%;
   position: absolute;
-  top: 35%;
-  left: 15%;
-}
-.teamSection .teamSection_main .leo .filip_bubble,
-.teamSection .teamSection_main .anna .filip_bubble,
-.teamSection .teamSection_main .fedor .filip_bubble,
-.teamSection .teamSection_main .filip .filip_bubble,
-.teamSection .teamSection_main .vojta .filip_bubble,
-.teamSection .teamSection_main .ramazan .filip_bubble {
-  top: 60%;
-  left: 20%;
-}
-.teamSection .teamSection_main .leo .filip_bubble p,
-.teamSection .teamSection_main .anna .filip_bubble p,
-.teamSection .teamSection_main .fedor .filip_bubble p,
-.teamSection .teamSection_main .filip .filip_bubble p,
-.teamSection .teamSection_main .vojta .filip_bubble p,
-.teamSection .teamSection_main .ramazan .filip_bubble p {
-  position: absolute;
-  top: 42%;
-  left: 15%;
+  top: 30%;
+  left: 9%;
+  transform: rotate(-3deg);
 }
 .teamSection .teamSection_main .leo .vojta_bubble,
 .teamSection .teamSection_main .anna .vojta_bubble,
@@ -599,19 +667,27 @@
 .teamSection .teamSection_main .filip .vojta_bubble,
 .teamSection .teamSection_main .vojta .vojta_bubble,
 .teamSection .teamSection_main .ramazan .vojta_bubble {
-  width: 110%;
-  top: 60%;
-  left: -10%;
+  width: 105%;
+  top: 52%;
+  left: -31%;
 }
-.teamSection .teamSection_main .leo .vojta_bubble p,
-.teamSection .teamSection_main .anna .vojta_bubble p,
-.teamSection .teamSection_main .fedor .vojta_bubble p,
-.teamSection .teamSection_main .filip .vojta_bubble p,
-.teamSection .teamSection_main .vojta .vojta_bubble p,
-.teamSection .teamSection_main .ramazan .vojta_bubble p {
+.teamSection .teamSection_main .leo .vojta_bubble .team_profession,
+.teamSection .teamSection_main .anna .vojta_bubble .team_profession,
+.teamSection .teamSection_main .fedor .vojta_bubble .team_profession,
+.teamSection .teamSection_main .filip .vojta_bubble .team_profession,
+.teamSection .teamSection_main .vojta .vojta_bubble .team_profession,
+.teamSection .teamSection_main .ramazan .vojta_bubble .team_profession {
+  display: block;
+}
+.teamSection .teamSection_main .leo .vojta_bubble .bubble_text,
+.teamSection .teamSection_main .anna .vojta_bubble .bubble_text,
+.teamSection .teamSection_main .fedor .vojta_bubble .bubble_text,
+.teamSection .teamSection_main .filip .vojta_bubble .bubble_text,
+.teamSection .teamSection_main .vojta .vojta_bubble .bubble_text,
+.teamSection .teamSection_main .ramazan .vojta_bubble .bubble_text {
   width: 80%;
   position: absolute;
-  top: 35%;
+  top: 25%;
   left: 10%;
 }
 .teamSection .teamSection_main .leo .ramazan_bubble,
@@ -620,18 +696,20 @@
 .teamSection .teamSection_main .filip .ramazan_bubble,
 .teamSection .teamSection_main .vojta .ramazan_bubble,
 .teamSection .teamSection_main .ramazan .ramazan_bubble {
-  top: 60%;
-  left: 5%;
+  top: 48%;
+  left: -12%;
+  width: 95%;
 }
-.teamSection .teamSection_main .leo .ramazan_bubble p,
-.teamSection .teamSection_main .anna .ramazan_bubble p,
-.teamSection .teamSection_main .fedor .ramazan_bubble p,
-.teamSection .teamSection_main .filip .ramazan_bubble p,
-.teamSection .teamSection_main .vojta .ramazan_bubble p,
-.teamSection .teamSection_main .ramazan .ramazan_bubble p {
+.teamSection .teamSection_main .leo .ramazan_bubble .bubble_text,
+.teamSection .teamSection_main .anna .ramazan_bubble .bubble_text,
+.teamSection .teamSection_main .fedor .ramazan_bubble .bubble_text,
+.teamSection .teamSection_main .filip .ramazan_bubble .bubble_text,
+.teamSection .teamSection_main .vojta .ramazan_bubble .bubble_text,
+.teamSection .teamSection_main .ramazan .ramazan_bubble .bubble_text {
   position: absolute;
-  top: 45%;
-  left: 15%;
+  top: 25%;
+  left: 12%;
+  width: 80%;
 }
 .teamSection .teamSection_main .leo .anna_bubble,
 .teamSection .teamSection_main .anna .anna_bubble,
@@ -639,18 +717,20 @@
 .teamSection .teamSection_main .filip .anna_bubble,
 .teamSection .teamSection_main .vojta .anna_bubble,
 .teamSection .teamSection_main .ramazan .anna_bubble {
-  top: -20%;
-  left: -40%;
+  top: 48%;
+  left: -30%;
+  width: 92%;
 }
-.teamSection .teamSection_main .leo .anna_bubble p,
-.teamSection .teamSection_main .anna .anna_bubble p,
-.teamSection .teamSection_main .fedor .anna_bubble p,
-.teamSection .teamSection_main .filip .anna_bubble p,
-.teamSection .teamSection_main .vojta .anna_bubble p,
-.teamSection .teamSection_main .ramazan .anna_bubble p {
+.teamSection .teamSection_main .leo .anna_bubble .bubble_text,
+.teamSection .teamSection_main .anna .anna_bubble .bubble_text,
+.teamSection .teamSection_main .fedor .anna_bubble .bubble_text,
+.teamSection .teamSection_main .filip .anna_bubble .bubble_text,
+.teamSection .teamSection_main .vojta .anna_bubble .bubble_text,
+.teamSection .teamSection_main .ramazan .anna_bubble .bubble_text {
+  width: 75%;
   position: absolute;
-  top: 20%;
-  left: 15%;
+  top: 28%;
+  left: 17%;
 }
 .teamSection .teamSection_main .leo .fedor_bubble,
 .teamSection .teamSection_main .anna .fedor_bubble,
@@ -658,20 +738,21 @@
 .teamSection .teamSection_main .filip .fedor_bubble,
 .teamSection .teamSection_main .vojta .fedor_bubble,
 .teamSection .teamSection_main .ramazan .fedor_bubble {
-  top: -15%;
-  left: -40%;
-  width: 110%;
+  top: 52%;
+  left: -50%;
+  width: 105%;
 }
-.teamSection .teamSection_main .leo .fedor_bubble p,
-.teamSection .teamSection_main .anna .fedor_bubble p,
-.teamSection .teamSection_main .fedor .fedor_bubble p,
-.teamSection .teamSection_main .filip .fedor_bubble p,
-.teamSection .teamSection_main .vojta .fedor_bubble p,
-.teamSection .teamSection_main .ramazan .fedor_bubble p {
-  width: 80%;
+.teamSection .teamSection_main .leo .fedor_bubble .bubble_text,
+.teamSection .teamSection_main .anna .fedor_bubble .bubble_text,
+.teamSection .teamSection_main .fedor .fedor_bubble .bubble_text,
+.teamSection .teamSection_main .filip .fedor_bubble .bubble_text,
+.teamSection .teamSection_main .vojta .fedor_bubble .bubble_text,
+.teamSection .teamSection_main .ramazan .fedor_bubble .bubble_text {
+  width: 75%;
   position: absolute;
-  top: 24%;
-  left: 8%;
+  top: 34%;
+  left: 13%;
+  transform: rotate(-4deg);
 }
 .teamSection .bounceIn {
   -webkit-animation-name: bounceIn;
@@ -756,14 +837,27 @@ body {
   font-family: "MouseMemoirs", sans-serif;
 }
 
-.wrapper {
-  width: 93%;
-  margin: auto;
-  background-color: white;
-  padding: 0 2%;
+.app {
+  display: flex;
 }
 
-.wrapper_commix {
+.main {
+  margin: auto;
+  width: 100%;
+}
+
+.dark_border {
+  width: 5%;
+  background-color: black;
+  position: relative;
+  z-index: 100;
+}
+
+.commix_border {
+  width: 3%;
+  position: relative;
+  z-index: 100;
+  background-color: white;
   border-left: 5px solid black;
   border-right: 5px solid black;
 }
@@ -775,6 +869,12 @@ img {
 
 .minHeight {
   min-height: 100vh;
+}
+
+h3 {
+  font-size: 3vw;
+  -webkit-text-stroke-width: 0.01vw;
+  -webkit-text-stroke-color: #000;
 }
 
 /*# sourceMappingURL=index.css.map */

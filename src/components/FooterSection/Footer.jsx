@@ -2,12 +2,12 @@ import React, { useRef, useState } from "react";
 import { isBrowser } from "react-device-detect";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 //========================================================================= browser
-import footer_canna from "../../assets/footer/footer_canna.webp";
+import footer_canna from "../../assets/footer/canna_footer.png";
 import discord from "../../assets/footer/discord_bubble.webp";
 import twitter from "../../assets/footer/twitter_bubble.webp";
 import insta from "../../assets/footer/instagram_bubble.webp";
-import canna_to_be from "../../assets/footer/canna_to_be.png";
-import to_be_continued_bubble from "../../assets/footer/to_be_continued_bubble.png";
+import canna_to_be from "../../assets/footer/canna_to_be.webp";
+import to_be_continued_bubble from "../../assets/footer/to_be_continued_bubble.webp";
 
 //========================================================================= browser
 import M_footer_canna from "../../assets/footer/M_footer_canna.webp";

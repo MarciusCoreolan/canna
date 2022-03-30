@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import header_title from "../../assets/header/browser/header_title.webp";
 import soundOn from "../../assets/header/sound_on.webp";
 import soundOff from "../../assets/header/sound_off.webp";
@@ -7,17 +7,27 @@ import cannaWebM from "../../assets/header/browser/canna.webm";
 import cannaPng from "../../assets/header/browser/canna.webp";
 
 function HeaderBrowserView({ handleSoundOnOFF, sound, onLoad }) {
+  const [shadow, setShadow] = useState(true);
+
   return (
     <>
       <div className={"header_title"}>
         <img src={header_title} alt="" />
       </div>
       <div className={"header_sound"} onClick={handleSoundOnOFF}>
-
-        <img className={`${sound ? 'npOpacity' : 'opacity'}`} src={soundOn} alt="" />
-
-        <img className={`${sound ? 'opacity' : 'npOpacity'}`} src={soundOff} alt="" />
-
+        <img
+          className={`${sound ? "npOpacity" : "opacity"}`}
+          src={soundOn}
+          alt=""
+        />
+        <img
+          className={`${onLoad && shadow ? "sound" : ""} ${
+            sound ? "opacity" : "npOpacity"
+          }`}
+          src={soundOff}
+          alt=""
+          onClick={() => setShadow(false)}
+        />
       </div>
       <div className={"work_in_progress"}>
         <img src={work_in_progress} alt="" />

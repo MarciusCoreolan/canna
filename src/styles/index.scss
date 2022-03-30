@@ -1,41 +1,61 @@
 @font-face {
-  font-family: 'MouseMemoirs';
-  src: url('../fonts/MouseMemoirs-Regular.eot');
-  src: local('☺'), url('../fonts/MouseMemoirs-Regular.woff') format('woff'), url('../fonts/MouseMemoirs-Regular.ttf') format('truetype'), url('../fonts/MouseMemoirs-Regular.svg') format('svg');
+  font-family: "MouseMemoirs";
+  src: url("../fonts/MouseMemoirs-Regular.eot");
+  src: local("☺"), url("../fonts/MouseMemoirs-Regular.woff") format("woff"),
+    url("../fonts/MouseMemoirs-Regular.ttf") format("truetype"),
+    url("../fonts/MouseMemoirs-Regular.svg") format("svg");
   font-weight: normal;
   font-display: swap;
   font-style: normal;
 }
+
 @import "headerStyle";
 @import "comixStyle";
 @import "sliderStyle";
 @import "footerStyle";
 @import "teamStyle";
 
-body{
+body {
   overflow-x: hidden;
   background-color: black;
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "MouseMemoirs", sans-serif;
 }
-.wrapper{
-  width: 93%;
-  margin: auto;
-  background-color: white;
-  padding: 0 2%;
+.app {
+  display: flex;
 }
-.wrapper_commix{
+.main {
+  margin: auto;
+  width: 100%;
+}
+.dark_border {
+  width: 5%;
+  background-color: black;
+  position: relative;
+  z-index: 100;
+}
+.commix_border {
+  width: 3%;
+  position: relative;
+  z-index: 100;
+  background-color: white;
   border-left: 5px solid black;
   border-right: 5px solid black;
 }
-img{
+img {
   user-select: none;
   width: 100%;
 }
-.minHeight{
+.minHeight {
   min-height: 100vh;
+}
+
+h3 {
+  font-size: 3vw;
+  -webkit-text-stroke-width: 0.01vw;
+  -webkit-text-stroke-color: #000;
 }

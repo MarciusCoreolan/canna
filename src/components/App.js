@@ -12,16 +12,20 @@ function App(props) {
   };
 
   return (
-    <div>
-      <div className={"wrapper"}>
-        <div className={"wrapper_commix"}>
-          <Header onLoad={onLoad} />
-          <ComixSection onLoad={onLoad} />
-          <CannaSlider onLoad={onLoad} />
-          <TeamSection onLoad={onLoad} />
-          <Footer onLoad={onLoad} />
-        </div>
+    <div className={"app"}>
+      <div className={"dark_border"}> </div>
+      <div className={"commix_border"}> </div>
+
+      <div className={"main"}>
+        <Header onLoad={onLoad} />
+        <ComixSection onLoad={onLoad} />
+        <CannaSlider onLoad={onLoad} />
+        <TeamSection onLoad={onLoad} />
+        <Footer onLoad={onLoad} />
       </div>
+
+      <div className={"commix_border"}> </div>
+      <div className={"dark_border"}> </div>
     </div>
   );
 }

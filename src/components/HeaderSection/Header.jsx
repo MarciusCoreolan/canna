@@ -17,6 +17,7 @@ function Header({ onLoad }) {
   }
   function setAudio(nowTime, savedTime) {
     ref.current.currentTime = (nowTime - savedTime) / 88;
+    ref.current.volume = 0.5;
   }
   function getTimestamp() {
     return Date.now();
@@ -33,10 +34,11 @@ function Header({ onLoad }) {
 
   return (
     <div className={`header ${!onLoad && isBrowser ? "minHeight" : ""}`}>
-      {onLoad &&
-      <audio ref={ref} preload="auto" muted={!sound} autoPlay loop>
-        <source src={audio} type="audio/mp3" />
-      </audio>}
+      {onLoad && (
+        <audio ref={ref} preload="auto" muted={!sound} autoPlay loop>
+          <source src={audio} type="audio/mp3" />
+        </audio>
+      )}
       {/*================================================================================= Browser */}
       <BrowserView>
         <HeaderBrowserView

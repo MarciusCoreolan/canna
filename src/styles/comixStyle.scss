@@ -1,35 +1,50 @@
 .comix_section {
   position: relative;
+  min-height: 100vw;
+  background-size: cover;
 
-  .opacity{
+  .comix_frame {
+    position: relative;
+    z-index: 2;
+  }
+  .comix_canna_bg {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+  }
+  .opacity {
     opacity: 0;
   }
   .bubble_top {
     position: absolute;
     width: 35%;
+    z-index: 6;
     top: 15%;
     left: 38%;
   }
   .bubble_bottom {
     position: absolute;
-    width: 41%;
-    top: 49%;
+    width: 38%;
+    top: 51%;
     left: 29%;
+    z-index: 7;
   }
   .comix_text {
     position: absolute;
-    width: 40%;
-    bottom: 6.2%;
-    left: 5%;
+    width: 38%;
+    bottom: 6.5%;
+    left: 6%;
     z-index: 100;
   }
   .canna_pop_up {
     width: 15.6%;
     position: absolute;
-    bottom: 6.2%;
+    bottom: 6%;
     left: 0;
+    z-index: 1;
   }
-//========================================= Animation
+  //========================================= Animation
 
   .fadeInUp {
     -webkit-animation-name: fadeInUp;
@@ -63,7 +78,6 @@
       transform: none;
     }
   }
-
 
   .fadeInLeftBig {
     -webkit-animation-name: fadeInLeftBig;
@@ -99,4 +113,3 @@
     }
   }
 }
-
