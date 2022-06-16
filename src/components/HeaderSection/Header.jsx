@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { BrowserView, MobileView, isBrowser } from "react-device-detect";
+import { BrowserView, MobileView } from "react-device-detect";
 
 import audio from "../../assets/header/canna_music.mp3";
 import HeaderBrowserView from "./HeaderBrowserView";
@@ -33,9 +33,9 @@ function Header({ onLoad }) {
   };
 
   return (
-    <div className={`header ${!onLoad && isBrowser ? "minHeight" : ""}`}>
+    <div>
       {onLoad && (
-        <audio ref={ref} preload="auto" muted={!sound} autoPlay loop>
+        <audio ref={ref} preload="metadata" muted={!sound} autoPlay loop>
           <source src={audio} type="audio/mp3" />
         </audio>
       )}
@@ -47,7 +47,7 @@ function Header({ onLoad }) {
           onLoad={onLoad}
         />
       </BrowserView>
-      {/*======================================================================================= Mobile */}
+      {/*================================================================================== Mobile */}
       <MobileView>
         <HeaderMobileView
           handleSoundOnOFF={handleSoundOnOFF}

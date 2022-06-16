@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import header_title from "../../assets/header/browser/header_title.webp";
-import soundOn from "../../assets/header/sound_on.webp";
-import soundOff from "../../assets/header/sound_off.webp";
+import soundOn from "../../assets/header/browser/sound_on.webp";
+import soundOff from "../../assets/header/browser/sound_off.webp";
 import work_in_progress from "../../assets/header/browser/work_in_progress.webp";
 import cannaWebM from "../../assets/header/browser/canna.webm";
 import cannaPng from "../../assets/header/browser/canna.webp";
+import { isBrowser } from "react-device-detect";
 
 function HeaderBrowserView({ handleSoundOnOFF, sound, onLoad }) {
   const [shadow, setShadow] = useState(true);
 
   return (
-    <>
+    <div className={`header ${!onLoad && isBrowser ? "minHeight" : ""}`}>
       <div className={"header_title"}>
         <img src={header_title} alt="" />
       </div>
@@ -35,7 +36,7 @@ function HeaderBrowserView({ handleSoundOnOFF, sound, onLoad }) {
       {onLoad ? (
         <div className={"header_main_container"}>
           <div className={"canna"}>
-            <video muted width="100%" autoPlay loop>
+            <video muted width="100%" autoPlay loop poster={cannaPng}>
               <source
                 src={cannaWebM}
                 type='video/ogg; codecs="theora, vorbis"'
@@ -50,7 +51,7 @@ function HeaderBrowserView({ handleSoundOnOFF, sound, onLoad }) {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
 

@@ -1,31 +1,27 @@
 import React, { useState } from "react";
-import Header from "./HeaderSection/Header";
-import ComixSection from "./ComixSection/ComixSection";
-import CannaSlider from "./SliderSection/CannaSlider";
-import Footer from "./FooterSection/Footer";
-import TeamSection from "./TeamSection/TeamSection";
+import Loading from "./Loading/Loading";
 
-function App(props) {
+const Main = React.lazy(() => {
+  return Promise.all([
+    import("./Main"),
+    new Promise((resolve) => setTimeout(resolve, 5000)),
+  ]).then(([moduleExports]) => moduleExports);
+});
+
+function App() {
   const [onLoad, setOnLoad] = useState(false);
+
   window.onload = function () {
-    setOnLoad(true);
+    setTimeout(() => {
+      setOnLoad(true);
+    }, 5000);
   };
 
   return (
     <div className={"app"}>
-      <div className={"dark_border"}> </div>
-      <div className={"commix_border"}> </div>
-
-      <div className={"main"}>
-        <Header onLoad={onLoad} />
-        <ComixSection onLoad={onLoad} />
-        <CannaSlider onLoad={onLoad} />
-        <TeamSection onLoad={onLoad} />
-        <Footer onLoad={onLoad} />
-      </div>
-
-      <div className={"commix_border"}> </div>
-      <div className={"dark_border"}> </div>
+      <React.Suspense fallback={<Loading />}>
+        <Main onLoad={onLoad} />
+      </React.Suspense>
     </div>
   );
 }

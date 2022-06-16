@@ -2,10 +2,13 @@
   position: relative;
   min-height: 100vw;
   background-size: cover;
+  width: 100%;
+  margin-top: -2%;
 
   .comix_frame {
     position: relative;
     z-index: 2;
+    width: 100%;
   }
   .comix_canna_bg {
     width: 50%;
@@ -22,20 +25,25 @@
     z-index: 6;
     top: 15%;
     left: 38%;
+    .bubble_top_text {
+      width: 75%;
+      position: absolute;
+      left: 12%;
+      top: 20%;
+    }
   }
   .bubble_bottom {
     position: absolute;
-    width: 38%;
-    top: 51%;
+    width: 39%;
+    top: 50%;
     left: 29%;
     z-index: 7;
-  }
-  .comix_text {
-    position: absolute;
-    width: 38%;
-    bottom: 6.5%;
-    left: 6%;
-    z-index: 100;
+    .bubble_bottom_text {
+      width: 50%;
+      position: absolute;
+      left: 15%;
+      top: 18%;
+    }
   }
   .canna_pop_up {
     width: 15.6%;
@@ -43,6 +51,13 @@
     bottom: 6%;
     left: 0;
     z-index: 1;
+  }
+  .canna_pop_up_text {
+    position: absolute;
+    width: 38%;
+    z-index: 100;
+    left: 6%;
+    bottom: 6.8%;
   }
   //========================================= Animation
 
@@ -112,4 +127,12 @@
       transform: none;
     }
   }
+}
+
+/////////////////////////////////////////////////////////////// mobile view commix section
+
+.Mcommix_section {
+  margin-top: -22%;
+  position: relative;
+  z-index: 2;
 }

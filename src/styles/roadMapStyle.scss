@@ -1,0 +1,137 @@
+.canna_slider {
+  margin: -27% 0 -15%;
+  background-image: url("../assets/slider/browser/slider_bg.webp");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  padding: 20% 0 7%;
+  position: relative;
+
+  .slider {
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin: 4% 0 5%;
+
+    .slide {
+      width: 100%;
+      margin: -2% 0 5%;
+      padding-bottom: 5%;
+
+      .slide_1_1_text,
+      .slide_1_2_text,
+      .slide_2_1_text,
+      .slide_2_2_text {
+        margin-top: 10%;
+      }
+      //--------------------------------------------slide 1
+      .slide_1_1 {
+        width: 8%;
+        position: absolute;
+        bottom: 19%;
+        left: 5%;
+        .slide_1_1_title {
+          width: 60%;
+        }
+      }
+      .slide_1_2 {
+        width: 10%;
+        position: absolute;
+        bottom: 19%;
+        left: 20%;
+        .slide_1_2_title {
+          width: 60%;
+        }
+      }
+      //--------------------------------------------slide 2
+      .slide_2_1 {
+        width: 10%;
+        position: absolute;
+        bottom: 17%;
+        left: 38%;
+        .slide_2_1_title {
+          width: 60%;
+        }
+      }
+      .slide_2_2 {
+        width: 9%;
+        position: absolute;
+        bottom: 16%;
+        left: 53%;
+        .slide_2_2_title {
+          width: 33%;
+        }
+      }
+      //--------------------------------------------slide 3
+      .slide_3_1 {
+        width: 10%;
+        position: absolute;
+        bottom: 16%;
+        left: 77%;
+        .slide_3_1_title {
+          width: 55%;
+        }
+        img {
+          margin-top: 7%;
+        }
+      }
+    }
+
+    * {
+      margin: 0;
+    }
+    .button_prev,
+    .button_next {
+      position: absolute;
+      width: 5%;
+      top: -7%;
+      z-index: 100;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: 0.3s;
+      }
+      &:active {
+        transform: scale(0.9);
+        transition: 0.3s;
+      }
+    }
+    .button_prev {
+      right: 10%;
+    }
+    .button_next {
+      right: 2%;
+    }
+  }
+}
+///////////////////////////////////////////////////////// mobile styles
+
+.Mroad_map {
+  position: relative;
+  background-image: url("../assets/slider/mobile/roadmap_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  padding: 12% 0 20%;
+  margin-top: -12%;
+  z-index: 1;
+
+  .road_map_logo {
+    width: 55%;
+    margin-left: auto;
+    margin-right: 10%;
+  }
+  .stages {
+    width: 90%;
+    margin: 10% auto;
+    display: flex;
+    align-items: start;
+    img {
+      width: 45%;
+      margin: 2%;
+    }
+  }
+}

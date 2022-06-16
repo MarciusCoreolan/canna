@@ -1,5 +1,5 @@
 .teamSection {
-  background-image: url("../assets/team/team_bg.webp");
+  background-image: url("../assets/team/browser/team_bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -59,23 +59,16 @@
         z-index: 20;
         font-size: 1.2vw;
         text-align: center;
-
-        .bubble_text_title {
-          font-size: 2.1vw;
-          color: white;
-          text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black,
-            0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black,
-            0 0 2px black;
-          -webkit-text-stroke-width: 0.1vw;
-          -webkit-text-stroke-color: #000;
-        }
-        .bubble_text {
-        }
       }
+
       .filip_bubble {
         top: 68%;
         left: 20%;
         width: 89%;
+        .bubble_text_title {
+          width: 43%;
+          margin-left: 28%;
+        }
         .bubble_text {
           width: 80%;
           position: absolute;
@@ -88,63 +81,82 @@
         top: 60%;
         left: -15%;
         width: 100%;
+        .bubble_text_title {
+          width: 33%;
+          margin-left: 30%;
+        }
         .bubble_text {
-          width: 80%;
+          width: 85%;
           position: absolute;
-          top: 30%;
+          top: 32%;
           left: 9%;
-          transform: rotate(-3deg);
+          transform: rotate(-4deg);
         }
       }
 
       .vojta_bubble {
-        width: 105%;
+        width: 110%;
         top: 52%;
         left: -31%;
-        .team_profession {
-          display: block;
+        .bubble_text_title {
+          width: 70%;
+          margin-left: 12%;
         }
         .bubble_text {
-          width: 80%;
+          width: 90%;
+          font-size: 1.3vw;
           position: absolute;
           top: 25%;
-          left: 10%;
+          left: 6%;
         }
       }
 
       .ramazan_bubble {
-        top: 48%;
+        top: 49%;
         left: -12%;
-        width: 95%;
+        width: 100%;
+        .bubble_text_title {
+          width: 45%;
+          margin-left: 28%;
+        }
         .bubble_text {
           position: absolute;
-          top: 25%;
-          left: 12%;
-          width: 80%;
+          top: 27%;
+          left: 8%;
+          width: 90%;
         }
       }
 
       .anna_bubble {
         top: 48%;
-        left: -30%;
-        width: 92%;
+        left: -35%;
+        width: 95%;
+        .bubble_text_title {
+          width: 73%;
+          margin-left: 17%;
+        }
         .bubble_text {
-          width: 75%;
+          width: 90%;
           position: absolute;
-          top: 28%;
-          left: 17%;
+          top: 32%;
+          left: 8%;
         }
       }
 
       .fedor_bubble {
         top: 52%;
         left: -50%;
-        width: 105%;
+        width: 100%;
+        .bubble_text_title {
+          width: 65%;
+          margin-left: 20%;
+          transform: rotate(4deg);
+        }
         .bubble_text {
-          width: 75%;
+          width: 90%;
           position: absolute;
-          top: 34%;
-          left: 13%;
+          top: 35%;
+          left: 8%;
           transform: rotate(-4deg);
         }
       }
@@ -208,24 +220,73 @@
     }
     50% {
       opacity: 0;
-      -webkit-transform: scale(0.3, 0.3);
       transform: scale(0.3, 0.3);
     }
     100% {
       opacity: 0;
     }
   }
-  @-webkit-keyframes zoomOut {
-    0% {
-      opacity: 1;
+}
+////////////////////////////////////////////////////////// team mobile view styles
+
+.Mteam_section {
+  position: relative;
+  padding: 12% 0 20%;
+  z-index: 3;
+  background-image: url("../assets/team/mobile/team_bg_mobile.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  margin-top: -10%;
+
+  .team_title {
+    width: 60%;
+    margin: auto;
+  }
+
+  .slider {
+    width: 100%;
+    position: relative;
+    margin: 10% 0 12%;
+    * {
+      margin: 0 0;
     }
-    50% {
-      opacity: 0;
-      -webkit-transform: scale(0.3, 0.3);
-      transform: scale(0.3, 0.3);
+
+    .button_prev,
+    .button_next {
+      width: 10%;
+      position: absolute;
+      z-index: 3;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:active {
+        transform: scale(0.9);
+        transition: 0.3s;
+      }
     }
-    100% {
-      opacity: 0;
+    .button_prev {
+      top: 28%;
+      left: 3%;
+    }
+    .button_next {
+      top: 27%;
+      right: 3%;
+    }
+
+    .slide {
+      width: 100%;
+      padding: 0 15%;
+
+      .team_message {
+        width: 90%;
+        margin: 10% auto 0;
+        text-align: center;
+        font-size: 3.5vw;
+        img {
+          width: 35%;
+        }
+      }
     }
   }
 }

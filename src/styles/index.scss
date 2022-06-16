@@ -8,16 +8,19 @@
   font-display: swap;
   font-style: normal;
 }
-
+@import "../../node_modules/normalize.css/normalize.css";
 @import "headerStyle";
 @import "comixStyle";
-@import "sliderStyle";
+@import "roadMapStyle";
 @import "footerStyle";
 @import "teamStyle";
+@import "preloadingStyle";
 
 body {
   overflow-x: hidden;
-  background-color: black;
+  background-color: #b08efe;
+  animation-name: fade_loading;
+  animation-duration: 700ms;
 }
 * {
   margin: 0;
@@ -25,27 +28,34 @@ body {
   box-sizing: border-box;
   font-family: "MouseMemoirs", sans-serif;
 }
-.app {
+.app_container {
   display: flex;
 }
 .main {
   margin: auto;
   width: 100%;
 }
-.dark_border {
-  width: 5%;
-  background-color: black;
-  position: relative;
-  z-index: 100;
+.root_main {
+  -webkit-animation-name: main_loading;
+  animation-name: main_loading;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 500ms;
+  animation-delay: 200ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
-.commix_border {
-  width: 3%;
-  position: relative;
-  z-index: 100;
-  background-color: white;
-  border-left: 5px solid black;
-  border-right: 5px solid black;
+@keyframes main_loading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+
 img {
   user-select: none;
   width: 100%;
@@ -54,8 +64,40 @@ img {
   min-height: 100vh;
 }
 
-h3 {
-  font-size: 3vw;
-  -webkit-text-stroke-width: 0.01vw;
-  -webkit-text-stroke-color: #000;
+//================================================ commix frames and borders
+.dark_border {
+  width: 5%;
+  background-color: black;
+  position: relative;
+  z-index: 150;
+  margin-bottom: -2.1%;
+}
+
+.left_commix_border,
+.right_commix_border {
+  width: 3%;
+  position: relative;
+  z-index: 100;
+  margin-bottom: -1%;
+  background-color: white;
+}
+.left_commix_border {
+  border-left: 0.4vw solid black;
+}
+.right_commix_border {
+  border-right: 0.4vw solid black;
+}
+.bottom_commix_border {
+  width: 86.9%;
+  height: 10px;
+  margin: auto;
+  border-top: 0.4vw solid black;
+}
+.bottom_commix_frame {
+  width: 100%;
+  margin: auto;
+  height: 2vw;
+  position: relative;
+  z-index: 110;
+  background-color: white;
 }

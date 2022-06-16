@@ -1,10 +1,12 @@
 import React, { useRef } from "react";
-import comix_frame from "../../assets/comix/browser/comix_bg.png";
+import comix_frame from "../../assets/comix/browser/comix_bg.webp";
 import bubble_top from "../../assets/comix/browser/bubble_top.webp";
+import bubble_top_text from "../../assets/comix/browser/buuble_top_text.webp";
 import bubble_bottom from "../../assets/comix/browser/bubble_bottom.webp";
-import comix_text from "../../assets/comix/browser/comix_text.webp";
+import bubble_bottom_text from "../../assets/comix/browser/bubble_bottom_text.webp";
 import canna_pop_up from "../../assets/comix/browser/canna_pop_up.webp";
-import comix_canna_bg from "../../assets/comix/browser/comix_canna_bg.png";
+import canna_pop_up_text from "../../assets/comix/browser/canna_pop_up_text.webp";
+import comix_canna_bg from "../../assets/comix/browser/comix_canna_bg.webp";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 function ComixBrowser({ onLoad }) {
@@ -28,7 +30,7 @@ function ComixBrowser({ onLoad }) {
   const cannaPopAnimation = useIntersectionObserver(cannaPop, {
     threshold: 0,
     root: null,
-    rootMargin: "-19%",
+    rootMargin: "-10%",
     freezeOnceVisible: true,
   });
 
@@ -44,6 +46,7 @@ function ComixBrowser({ onLoad }) {
             }
           >
             <img src={bubble_top} alt="" />
+            <img className={"bubble_top_text"} src={bubble_top_text} alt="" />
           </div>
         )}
       </div>
@@ -55,12 +58,17 @@ function ComixBrowser({ onLoad }) {
             }
           >
             <img src={bubble_bottom} alt="" />
+            <img
+              className={"bubble_bottom_text"}
+              src={bubble_bottom_text}
+              alt=""
+            />
           </div>
         )}
       </div>
 
-      <div className={"comix_text"}>
-        <img src={comix_text} alt="" />
+      <div>
+        <img className={"canna_pop_up_text"} src={canna_pop_up_text} alt="" />
       </div>
       <div className={"comix_canna_bg"}>
         <img src={comix_canna_bg} alt="" />
