@@ -9,7 +9,7 @@ import canna_pop_up_text from "../../assets/comix/browser/canna_pop_up_text.webp
 import comix_canna_bg from "../../assets/comix/browser/comix_canna_bg.webp";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
-function ComixBrowser({ onLoad }) {
+function ComixBrowser() {
   const bubbleTop = useRef(null);
   const bubbleBottom = useRef(null);
   const cannaPop = useRef(null);
@@ -39,32 +39,28 @@ function ComixBrowser({ onLoad }) {
       <img className={"comix_frame"} src={comix_frame} alt="" />
 
       <div className={"bubble_top"} ref={bubbleTop}>
-        {onLoad && (
-          <div
-            className={
-              bubbleTopAnimation.isIntersecting ? "fadeInUp" : "opacity"
-            }
-          >
-            <img src={bubble_top} alt="" />
-            <img className={"bubble_top_text"} src={bubble_top_text} alt="" />
-          </div>
-        )}
+        <div
+          className={
+            bubbleTopAnimation?.isIntersecting ? "fadeInUp" : "opacity"
+          }
+        >
+          <img src={bubble_top} alt="" />
+          <img className={"bubble_top_text"} src={bubble_top_text} alt="" />
+        </div>
       </div>
       <div className={"bubble_bottom"} ref={bubbleBottom}>
-        {onLoad && (
-          <div
-            className={
-              bubbleBottomAnimation.isIntersecting ? "fadeInUp" : "opacity"
-            }
-          >
-            <img src={bubble_bottom} alt="" />
-            <img
-              className={"bubble_bottom_text"}
-              src={bubble_bottom_text}
-              alt=""
-            />
-          </div>
-        )}
+        <div
+          className={
+            bubbleBottomAnimation?.isIntersecting ? "fadeInUp" : "opacity"
+          }
+        >
+          <img src={bubble_bottom} alt="" />
+          <img
+            className={"bubble_bottom_text"}
+            src={bubble_bottom_text}
+            alt=""
+          />
+        </div>
       </div>
 
       <div>
@@ -74,15 +70,13 @@ function ComixBrowser({ onLoad }) {
         <img src={comix_canna_bg} alt="" />
       </div>
       <div className={"canna_pop_up"} ref={cannaPop}>
-        {onLoad && (
-          <div
-            className={`${
-              cannaPopAnimation.isIntersecting ? "fadeInLeftBig" : "opacity"
-            }`}
-          >
-            <img src={canna_pop_up} alt="" />
-          </div>
-        )}
+        <div
+          className={`${
+            cannaPopAnimation?.isIntersecting ? "fadeInLeftBig" : "opacity"
+          }`}
+        >
+          <img src={canna_pop_up} alt="" />
+        </div>
       </div>
     </>
   );

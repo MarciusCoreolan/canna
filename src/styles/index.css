@@ -1,13 +1,5 @@
 @charset "UTF-8";
 @import "../../node_modules/normalize.css/normalize.css";
-@font-face {
-  font-family: "MouseMemoirs";
-  src: url("../fonts/MouseMemoirs-Regular.eot");
-  src: local("☺"), url("../fonts/MouseMemoirs-Regular.woff") format("woff"), url("../fonts/MouseMemoirs-Regular.ttf") format("truetype"), url("../fonts/MouseMemoirs-Regular.svg") format("svg");
-  font-weight: normal;
-  font-display: swap;
-  font-style: normal;
-}
 .header {
   position: relative;
   padding: 2% 0 20%;
@@ -83,24 +75,17 @@
 
 .Mheader {
   position: relative;
-  background-image: url("../assets/header/mobile/header_bg_mobile.png");
+  background-image: url("../assets/header/mobile/header_bg_mobile.webp");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
   padding: 20% 0 25% 0;
 }
-.Mheader .menu {
-  width: 47%;
-  position: fixed;
-  right: 6%;
-  top: 3%;
-  z-index: 100;
-}
 .Mheader .active {
   background-color: rgba(128, 128, 128, 0.49);
 }
 .Mheader .header_top_panel {
-  background-image: url("../assets/header/mobile/header_top_panel.png");
+  background-image: url("../assets/header/mobile/header_top_panel.webp");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -388,7 +373,7 @@
 
 .Mroad_map {
   position: relative;
-  background-image: url("../assets/slider/mobile/roadmap_bg.png");
+  background-image: url("../assets/slider/mobile/roadmap_bg.webp");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -619,7 +604,7 @@
 .Mfooter {
   position: relative;
   z-index: 10;
-  background-image: url("../assets/footer/mobile/footer_bg_mobile.png");
+  background-image: url("../assets/footer/mobile/footer_bg_mobile.webp");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -635,6 +620,22 @@
   position: absolute;
   top: 35%;
   left: 3%;
+  z-index: 10;
+}
+.Mfooter .twitter a {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  border-radius: 50%;
+  top: 5%;
+  left: 12%;
+  z-index: 100;
+  webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+.Mfooter .twitter:active {
+  transform: scale(-0.1);
+  transition: 1s;
 }
 .Mfooter .discord {
   width: 50%;
@@ -642,17 +643,157 @@
   top: 15%;
   left: 20%;
 }
+.Mfooter .discord a {
+  width: 80%;
+  height: 50%;
+  position: absolute;
+  border-radius: 50%;
+  top: 7%;
+  left: 8%;
+  z-index: 100;
+  webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+.Mfooter .discord:active {
+  transform: scale(-0.1);
+  transition: 1s;
+}
 .Mfooter .insta {
   width: 33%;
   position: absolute;
   top: 33%;
   right: 5%;
 }
+.Mfooter .insta a {
+  width: 90%;
+  height: 60%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  z-index: 100;
+  webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+.Mfooter .insta:active {
+  transform: scale(-0.1);
+  transition: 1s;
+}
 .Mfooter .to_be_continued {
-  width: 60%;
+  width: 35%;
   position: absolute;
   bottom: -1%;
-  right: -4%;
+  right: 0;
+  display: flex;
+  z-index: 1000;
+}
+.Mfooter .to_be_continued .canna {
+  display: flex;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.Mfooter .to_be_continued .canna_bubble {
+  width: 110%;
+  position: absolute;
+  right: 58%;
+  bottom: 15%;
+  z-index: 0;
+  transform: rotate(20deg);
+}
+.Mfooter .fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(30px, 0);
+    transform: translate(30px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(2000px, 0);
+    transform: translate(2000px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.Mfooter .bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 0.7s;
+  animation-delay: 0.7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: scale(0.3, 0.3);
+  }
+  20% {
+    transform: scale(1.1, 1.1);
+  }
+  40% {
+    transform: scale(0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.03, 1.03);
+  }
+  80% {
+    transform: scale(0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: scale(0.3, 0.3);
+  }
+  20% {
+    transform: scale(1.1, 1.1);
+  }
+  40% {
+    transform: scale(0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.03, 1.03);
+  }
+  80% {
+    transform: scale(0.97, 0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
 }
 
 .teamSection {
@@ -1000,7 +1141,7 @@
   position: relative;
   padding: 12% 0 20%;
   z-index: 3;
-  background-image: url("../assets/team/mobile/team_bg_mobile.png");
+  background-image: url("../assets/team/mobile/team_bg_mobile.webp");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -1013,7 +1154,7 @@
 .Mteam_section .slider {
   width: 100%;
   position: relative;
-  margin: 10% 0 12%;
+  margin: 10% 0 5%;
 }
 .Mteam_section .slider * {
   margin: 0 0;
@@ -1049,33 +1190,42 @@
   text-align: center;
   font-size: 3.5vw;
 }
-.Mteam_section .slider .slide .team_message img {
+.Mteam_section .slider .slide .team_message .filip {
   width: 35%;
+}
+.Mteam_section .slider .slide .team_message .leo {
+  width: 30%;
+}
+.Mteam_section .slider .slide .team_message .vojta {
+  width: 75%;
+}
+.Mteam_section .slider .slide .team_message .ramazan {
+  width: 45%;
+}
+.Mteam_section .slider .slide .team_message .anna {
+  width: 70%;
+}
+.Mteam_section .slider .slide .team_message .fedor {
+  width: 75%;
 }
 
 .loading_page {
   background-color: #b08efe;
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   z-index: 9000;
-  -webkit-animation-name: fade_loading;
-  animation-name: fade_loading;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 700ms;
-  animation-delay: 5000ms;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s;
 }
-
-.preloader__logo {
+.loading_page .preloader__logo {
   width: 70%;
   left: 15vw;
   max-height: 100vh;
   position: absolute;
 }
-
-.preloader__loading {
+.loading_page .preloader__loading {
   width: 15%;
   font-size: 5vw;
   left: 41vw;
@@ -1083,22 +1233,102 @@
   position: absolute;
 }
 
-@keyframes fade_loading {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-    position: absolute;
-    z-index: 9000;
-    visibility: hidden;
-  }
+.Mloading_page {
+  background-color: #b08efe;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 9000;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s;
+}
+.Mloading_page .preloader__logo {
+  width: 125%;
+  left: -10vw;
+  max-height: 100vh;
+  position: absolute;
+}
+.Mloading_page .preloader__loading {
+  width: 30%;
+  font-size: 5vw;
+  left: 35vw;
+  top: 53vw;
+  position: absolute;
+}
+
+.done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dropDownMenu {
+  width: 47%;
+  position: fixed;
+  padding: 14% 0 6.3% 5.2%;
+  right: 6%;
+  top: 3%;
+  z-index: 100;
+  background-image: url("../assets/menu_burger/dropdown_menu.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  visibility: visible;
+}
+.dropDownMenu .menu_burger_buttons {
+  width: 100%;
+  padding: 9% 0;
+  background-color: rgba(139, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropDownMenu .back_to_top {
+  background-color: #b08efe;
+}
+.dropDownMenu .back_to_top img {
+  width: 50%;
+}
+.dropDownMenu .introduction {
+  background-color: #fff;
+}
+.dropDownMenu .introduction img {
+  width: 60%;
+}
+.dropDownMenu .roadmap {
+  background-color: #b08efe;
+}
+.dropDownMenu .roadmap img {
+  width: 45%;
+}
+.dropDownMenu .the_team {
+  background-color: #fff;
+}
+.dropDownMenu .the_team img {
+  width: 45%;
+}
+.dropDownMenu .social_media {
+  background-color: #b08efe;
+}
+.dropDownMenu .social_media img {
+  width: 55%;
+}
+
+.visibility {
+  visibility: hidden;
+}
+
+@font-face {
+  font-family: "MouseMemoirs";
+  src: url("../fonts/MouseMemoirs-Regular.eot");
+  src: local("☺"), url("../fonts/MouseMemoirs-Regular.woff") format("woff"), url("../fonts/MouseMemoirs-Regular.ttf") format("truetype"), url("../fonts/MouseMemoirs-Regular.svg") format("svg");
+  font-weight: normal;
+  font-display: swap;
+  font-style: normal;
 }
 body {
   overflow-x: hidden;
+  overflow-y: hidden;
   background-color: #b08efe;
   animation-name: fade_loading;
   animation-duration: 700ms;
@@ -1117,6 +1347,11 @@ body {
 
 .main {
   margin: auto;
+  width: 100%;
+}
+
+img {
+  user-select: none;
   width: 100%;
 }
 
@@ -1141,15 +1376,6 @@ body {
     opacity: 1;
   }
 }
-img {
-  user-select: none;
-  width: 100%;
-}
-
-.minHeight {
-  min-height: 100vh;
-}
-
 .dark_border {
   width: 5%;
   background-color: black;

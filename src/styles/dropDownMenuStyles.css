@@ -1,0 +1,52 @@
+.dropDownMenu {
+  width: 47%;
+  position: fixed;
+  padding: 14% 0 6.3% 5.2%;
+  right: 6%;
+  top: 3%;
+  z-index: 100;
+  background-image: url("../assets/menu_burger/dropdown_menu.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.dropDownMenu .menu_burger_buttons {
+  width: 100%;
+  padding: 9% 0;
+  background-color: rgba(139, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropDownMenu .back_to_top {
+  background-color: #b08efe;
+}
+.dropDownMenu .back_to_top img {
+  width: 50%;
+}
+.dropDownMenu .introduction {
+  background-color: #fff;
+}
+.dropDownMenu .introduction img {
+  width: 60%;
+}
+.dropDownMenu .roadmap {
+  background-color: #b08efe;
+}
+.dropDownMenu .roadmap img {
+  width: 45%;
+}
+.dropDownMenu .the_team {
+  background-color: #fff;
+}
+.dropDownMenu .the_team img {
+  width: 45%;
+}
+.dropDownMenu .social_media {
+  background-color: #b08efe;
+}
+.dropDownMenu .social_media img {
+  width: 55%;
+}
+
+/*# sourceMappingURL=dropDownMenuStyles.css.map */

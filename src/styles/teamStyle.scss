@@ -233,7 +233,7 @@
   position: relative;
   padding: 12% 0 20%;
   z-index: 3;
-  background-image: url("../assets/team/mobile/team_bg_mobile.png");
+  background-image: url("../assets/team/mobile/team_bg_mobile.webp");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -247,7 +247,7 @@
   .slider {
     width: 100%;
     position: relative;
-    margin: 10% 0 12%;
+    margin: 10% 0 5%;
     * {
       margin: 0 0;
     }
@@ -283,8 +283,24 @@
         margin: 10% auto 0;
         text-align: center;
         font-size: 3.5vw;
-        img {
+
+        .filip {
           width: 35%;
+        }
+        .leo {
+          width: 30%;
+        }
+        .vojta {
+          width: 75%;
+        }
+        .ramazan {
+          width: 45%;
+        }
+        .anna {
+          width: 70%;
+        }
+        .fedor {
+          width: 75%;
         }
       }
     }

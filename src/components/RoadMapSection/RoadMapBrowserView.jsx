@@ -1,5 +1,4 @@
 import React from "react";
-import { isBrowser } from "react-device-detect";
 import Carousel from "react-elastic-carousel";
 
 import slide1 from "../../assets/slider/browser/slide_1.webp";
@@ -21,7 +20,7 @@ import slide_3_1_text from "../../assets/slider/browser/slide_3_1.webp";
 import prev from "../../assets/slider/browser/arrow_left.webp";
 import next from "../../assets/slider/browser/arrow_right.webp";
 
-function RoadMapBrowserView({ onLoad }) {
+function RoadMapBrowserView() {
   const buttons = ({ type, onClick }) => (
     <div onClick={onClick}>
       {type === "PREV" ? (
@@ -33,7 +32,7 @@ function RoadMapBrowserView({ onLoad }) {
   );
 
   return (
-    <div className={`canna_slider ${!onLoad && isBrowser ? "minHeight" : ""}`}>
+    <div className={`canna_slider`}>
       <Carousel
         itemsToShow={1}
         pagination={false}

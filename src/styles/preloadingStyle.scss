@@ -2,42 +2,54 @@
   background-color: #b08efe;
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   z-index: 9000;
-  -webkit-animation-name: fade_loading;
-  animation-name: fade_loading;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 700ms;
-  animation-delay: 5000ms;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s;
 
-.preloader__logo {
-  width: 70%;
-  left: 15vw;
-  max-height: 100vh;
-  position: absolute;
-}
-.preloader__loading {
-  width: 15%;
-  font-size: 5vw;
-  left: 41vw;
-  top: 28vw;
-  position: absolute;
-}
-
-@keyframes fade_loading {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
+  .preloader__logo {
+    width: 70%;
+    left: 15vw;
+    max-height: 100vh;
     position: absolute;
-    z-index: 9000;
-    visibility: hidden;
+  }
+  .preloader__loading {
+    width: 15%;
+    font-size: 5vw;
+    left: 41vw;
+    top: 28vw;
+    position: absolute;
   }
 }
+//=====================================mobile
+.Mloading_page{
+  background-color: #b08efe;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 9000;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s;
+
+  .preloader__logo {
+    width: 125%;
+    left: -10vw;
+    max-height: 100vh;
+    position: absolute;
+  }
+  .preloader__loading {
+    width: 30%;
+    font-size: 5vw;
+    left: 35vw;
+    top: 53vw;
+    position: absolute;
+  }
+}
+
+.done{
+  opacity: 0;
+  visibility: hidden;
+}
+

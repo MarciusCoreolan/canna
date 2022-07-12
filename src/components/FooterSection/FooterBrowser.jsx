@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import { isBrowser } from "react-device-detect";
 import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 import discord from "../../assets/footer/browser/discord_bubble.webp";
@@ -9,7 +8,7 @@ import insta from "../../assets/footer/browser/instagram_bubble.webp";
 import canna_to_be from "../../assets/footer/browser/canna_to_be.webp";
 import to_be_continued_bubble from "../../assets/footer/browser/to_be_continued_bubble.webp";
 
-function FooterBrowser({ onLoad }) {
+function FooterBrowser() {
   const canna = useRef();
   const [toggle, setToggle] = useState(false);
 
@@ -28,7 +27,7 @@ function FooterBrowser({ onLoad }) {
   });
 
   return (
-    <div className={`footer ${!onLoad && isBrowser ? "minHeight" : ""}`}>
+    <div className={`footer`}>
       <div
         className={`footer_img_container discord ${
           toggle === "disc" && "hovered"
@@ -36,7 +35,6 @@ function FooterBrowser({ onLoad }) {
       >
         <img src={discord} alt="discord" />
         <a
-          className={"footer_link"}
           target="_blank"
           href={"https://discord.com/invite/KEAnytN9G9"}
           selector={"disc"}
@@ -45,9 +43,7 @@ function FooterBrowser({ onLoad }) {
           onMouseOver={(e) => {
             handleOver(e);
           }}
-        >
-          {" "}
-        </a>
+        ></a>
       </div>
       <div
         className={`footer_img_container twitter ${
@@ -95,24 +91,22 @@ function FooterBrowser({ onLoad }) {
         </div>
 
         <div className={"continued"} ref={canna}>
-          {onLoad && (
-            <>
-              <img
-                src={to_be_continued_bubble}
-                alt="to be continued"
-                className={`canna_bubble ${
-                  cannaAnimation.isIntersecting ? "bounceIn" : "opacity"
-                }`}
-              />
-              <img
-                className={`canna ${
-                  cannaAnimation.isIntersecting ? "fadeInRightBig" : "opacity"
-                }`}
-                src={canna_to_be}
-                alt="to be continued"
-              />
-            </>
-          )}
+          <>
+            <img
+              src={to_be_continued_bubble}
+              alt="to be continued"
+              className={`canna_bubble ${
+                cannaAnimation?.isIntersecting ? "bounceIn" : "opacity"
+              }`}
+            />
+            <img
+              className={`canna ${
+                cannaAnimation?.isIntersecting ? "fadeInRightBig" : "opacity"
+              }`}
+              src={canna_to_be}
+              alt="to be continued"
+            />
+          </>
         </div>
       </div>
     </div>

@@ -14,10 +14,10 @@ function Main({ onLoad }) {
 
         <div className={"main"}>
           <Header onLoad={onLoad} />
-          <ComixSection onLoad={onLoad} />
-          <RoadMapSection onLoad={onLoad} />
-          <TeamSection onLoad={onLoad} />
-          <Footer onLoad={onLoad} />
+          <ComixSection />
+          <RoadMapSection />
+          <TeamSection />
+          <Footer />
         </div>
 
         <div className={"left_commix_border"} />

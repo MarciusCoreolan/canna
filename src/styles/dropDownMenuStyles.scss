@@ -1,0 +1,55 @@
+.dropDownMenu {
+  width: 47%;
+  position: fixed;
+  padding: 14% 0 6.3% 5.2%;
+  right: 6%;
+  top: 3%;
+  z-index: 100;
+  background-image: url("../assets/menu_burger/dropdown_menu.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  visibility: visible;
+
+  .menu_burger_buttons {
+    width: 100%;
+    padding: 9% 0;
+    background-color: rgba(139, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .back_to_top {
+    background-color: #b08efe;
+    img {
+      width: 50%;
+    }
+  }
+  .introduction {
+    background-color: #fff;
+    img {
+      width: 60%;
+    }
+  }
+  .roadmap {
+    background-color: #b08efe;
+    img {
+      width: 45%;
+    }
+  }
+  .the_team {
+    background-color: #fff;
+    img {
+      width: 45%;
+    }
+  }
+  .social_media {
+    background-color: #b08efe;
+    img {
+      width: 55%;
+    }
+  }
+}
+.visibility {
+  visibility: hidden;
+}

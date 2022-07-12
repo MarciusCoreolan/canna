@@ -5,13 +5,12 @@ import soundOff from "../../assets/header/browser/sound_off.webp";
 import work_in_progress from "../../assets/header/browser/work_in_progress.webp";
 import cannaWebM from "../../assets/header/browser/canna.webm";
 import cannaPng from "../../assets/header/browser/canna.webp";
-import { isBrowser } from "react-device-detect";
 
 function HeaderBrowserView({ handleSoundOnOFF, sound, onLoad }) {
   const [shadow, setShadow] = useState(true);
 
   return (
-    <div className={`header ${!onLoad && isBrowser ? "minHeight" : ""}`}>
+    <div className={`header`}>
       <div className={"header_title"}>
         <img src={header_title} alt="" />
       </div>
@@ -22,7 +21,7 @@ function HeaderBrowserView({ handleSoundOnOFF, sound, onLoad }) {
           alt=""
         />
         <img
-          className={`${onLoad && shadow ? "sound" : ""} ${
+          className={`${shadow ? "sound" : ""} ${
             sound ? "opacity" : "npOpacity"
           }`}
           src={soundOff}

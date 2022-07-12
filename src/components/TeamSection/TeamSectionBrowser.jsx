@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { isBrowser } from "react-device-detect";
 
 import the_team from "../../assets/team/browser/the_team.webp";
 import filip from "../../assets/team/browser/filip.webp";
@@ -26,7 +25,7 @@ import fedor from "../../assets/team/browser/fedor.webp";
 import fedor_bubble from "../../assets/team/browser/fedor_bubble.webp";
 import fedor_title from "../../assets/team/browser/Michal_title.webp";
 
-function TeamSectionBrowser({ onLoad }) {
+function TeamSectionBrowser() {
   const [imgIndex, setImgIndex] = useState(false);
 
   const mouseOver = (index) => {
@@ -38,10 +37,7 @@ function TeamSectionBrowser({ onLoad }) {
   };
 
   return (
-    <div
-      className={`teamSection ${!onLoad && isBrowser ? "minHeight" : ""}`}
-      onMouseOut={mouseOut}
-    >
+    <div className={`teamSection`} onMouseOut={mouseOut}>
       <div className={"teamSection_title"}>
         <div className={"the"}>
           <img src={the_team} alt="" />
@@ -106,8 +102,8 @@ function TeamSectionBrowser({ onLoad }) {
                 </div>{" "}
                 <p>
                   Our all-mighty father, and owner of the braincells responsible
-                  for this. He’s also surgeon, he mentions that frequently with
-                  much self-satisfaction.
+                  for this. He's also a surgeon, he mentions that frequently
+                  with much self-satisfaction.
                 </p>
               </div>
             </div>

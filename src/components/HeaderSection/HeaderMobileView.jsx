@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import canna_sapiens_title from "../../assets/header/mobile/canna_sapiens_title.png";
-import twitter_logo from "../../assets/header/mobile/twitter_logo.png";
-import menu_burger_btn from "../../assets/header/mobile/menu_burger_btn.png";
-import canna_logo from "../../assets/header/mobile/canna_logo.png";
-import work_in_progress_bubble from "../../assets/header/mobile/work_in_progress_bubble.png";
-import cannasapiens_header_title from "../../assets/header/mobile/cannasapiens_header_title.png";
-import sound_on from "../../assets/header/mobile/sound_on.png";
-import pushup_canna from "../../assets/header/mobile/pushup_canna.png";
+import canna_sapiens_title from "../../assets/header/mobile/canna_sapiens_title.webp";
+import twitter_logo from "../../assets/header/mobile/twitter_logo.webp";
+import menu_burger_btn from "../../assets/header/mobile/menu_burger_btn.webp";
+import canna_logo from "../../assets/header/mobile/canna_logo.webp";
+import work_in_progress_bubble from "../../assets/header/mobile/work_in_progress_bubble.webp";
+import cannasapiens_header_title from "../../assets/header/mobile/cannasapiens_header_title.webp";
+import sound_on from "../../assets/header/mobile/sound_on.webp";
+import pushup_canna from "../../assets/header/mobile/pushup_canna.webp";
 
 import DropDownMenu from "../Menu/DropDownMenu";
 
@@ -14,7 +14,7 @@ function HeaderMobileView({ handleSoundOnOFF, sound, onLoad }) {
   const [menu, setMenu] = useState(false);
 
   return (
-    <div className={"Mheader"}>
+    <div className={"Mheader"} id={"header"}>
       <div className={"header_top_panel"}>
         <div className={"title"}>
           <img src={canna_sapiens_title} alt="" />
@@ -31,7 +31,7 @@ function HeaderMobileView({ handleSoundOnOFF, sound, onLoad }) {
         </div>
       </div>
 
-      {menu && <DropDownMenu />}
+      <DropDownMenu menu={menu}/>
 
       <div>
         <div className={"canna_logo"}>

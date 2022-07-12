@@ -1,3 +1,12 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "headerStyle";
+@import "comixStyle";
+@import "roadMapStyle";
+@import "footerStyle";
+@import "teamStyle";
+@import "preloadingStyle";
+@import "dropDownMenuStyles";
+
 @font-face {
   font-family: "MouseMemoirs";
   src: url("../fonts/MouseMemoirs-Regular.eot");
@@ -8,16 +17,10 @@
   font-display: swap;
   font-style: normal;
 }
-@import "../../node_modules/normalize.css/normalize.css";
-@import "headerStyle";
-@import "comixStyle";
-@import "roadMapStyle";
-@import "footerStyle";
-@import "teamStyle";
-@import "preloadingStyle";
 
 body {
   overflow-x: hidden;
+  overflow-y:hidden;
   background-color: #b08efe;
   animation-name: fade_loading;
   animation-duration: 700ms;
@@ -33,6 +36,10 @@ body {
 }
 .main {
   margin: auto;
+  width: 100%;
+}
+img {
+  user-select: none;
   width: 100%;
 }
 .root_main {
@@ -55,15 +62,6 @@ body {
     opacity: 1;
   }
 }
-
-img {
-  user-select: none;
-  width: 100%;
-}
-.minHeight {
-  min-height: 100vh;
-}
-
 //================================================ commix frames and borders
 .dark_border {
   width: 5%;

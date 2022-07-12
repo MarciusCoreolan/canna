@@ -2,10 +2,12 @@ import React from "react";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import logo from "../../assets/loading/logo loading screen lottie file.json";
 import loading from "../../assets/loading/Loading.webm";
+import {isBrowser} from "react-device-detect";
 
-function Loading(props) {
+function Loading({bodyOnload, onLoad}) {
+
   return (
-    <div className={"loading_page"}>
+    <div className={`${isBrowser ?'loading_page' : 'Mloading_page'} ${bodyOnload && onLoad && 'done'}`}>
       <Player autoplay loop src={logo} className={"preloader__logo"}>
         <Controls
           visible={false}
